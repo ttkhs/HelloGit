@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<script>
+  <memento>
+    <option type="attributes">
+      <DATA_PROCESSING_CONNECTION_OPTION_XMLFW_CONF><![CDATA[false]]></DATA_PROCESSING_CONNECTION_OPTION_XMLFW_CONF>
+    </option>
+    <extension type="attributes">
+      <created><![CDATA[1591073878865]]></created>
+      <lastUpdated><![CDATA[1591161107365]]></lastUpdated>
+      <testArgumentValues children="property" type="attributes">
+        <property key="str_message_I"/>
+        <property key="str_result_I"/>
+        <property key="str_plm_key_I"><![CDATA[1019]]></property>
+      </testArgumentValues>
+      <migrationFrows type="attributes"/>
+      <testArgumentValuesEnabled><![CDATA[true]]></testArgumentValuesEnabled>
+      <gridSize><![CDATA[16]]></gridSize>
+      <migrationFlows type="attributes"/>
+    </extension>
+  </memento>
+  <children type="components">
+    <memento id="kk00001g7kl00v2rmfs9lg44n4sr" type="DataProcessingCallComponent">
+      <base type="attributes">
+        <moduleName><![CDATA[sqlserver_adapter]]></moduleName>
+        <operationName><![CDATA[execute_select_query]]></operationName>
+        <operationProperties children="property" type="attributes">
+          <property key="INPUT_TYPE_TABLE::columns"><![CDATA[INPUT_NAME_COLUMN::INPUT_TYPE_COLUMN]]></property>
+          <property key="WIZARD_STATEMENT_XML::type"><![CDATA[simple]]></property>
+          <property key="TYPE_TABLE::row::2::column::NAME_COLUMN"><![CDATA[etlUploadParentKeyValue]]></property>
+          <property key="CONNECTION::value"><![CDATA[dvdb]]></property>
+          <property key="TYPE_TABLE::type"><![CDATA[table]]></property>
+          <property key="KEY_QUERY_TIMEOUT_ENABLED::value"><![CDATA[false]]></property>
+          <property key="XMLFW_LARGEDATA::type"><![CDATA[simple]]></property>
+          <property key="TYPE_TABLE::columns"><![CDATA[NAME_COLUMN::TYPE_COLUMN]]></property>
+          <property key="TYPE_TABLE::row::3::column::TYPE_COLUMN"><![CDATA[nvarchar (String)]]></property>
+          <property key="KEY_QUERY_TIMEOUT_SEC::value"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::0::column::TYPE_COLUMN"><![CDATA[nvarchar (String)]]></property>
+          <property key="INPUT_TYPE_TABLE::type"><![CDATA[table]]></property>
+          <property key="TYPE_TABLE::rows"><![CDATA[4]]></property>
+          <property key="HIDDEN_SQLPARAM_TABLE::type"><![CDATA[table]]></property>
+          <property key="WIZARD::value"><![CDATA[SELECT
+	[DM_ETL_UPLOAD].etlUploadModel,
+	[DM_ETL_UPLOAD].etlUploadParentKey,
+	[DM_ETL_UPLOAD].etlUploadParentKeyValue,
+	[DM_ETL_UPLOAD].etlUploadFile_jshfilename
+FROM
+	[DM_ETL_UPLOAD]
+WHERE
+	[DM_ETL_UPLOAD].etlUploadId ='${str_plm_key_I}'
+]]></property>
+          <property key="TYPE_TABLE::row::3::column::NAME_COLUMN"><![CDATA[etlUploadFile_jshfilename]]></property>
+          <property key="TYPE_TABLE::row::0::column::NAME_COLUMN"><![CDATA[etlUploadModel]]></property>
+          <property key="CONNECTION::type"><![CDATA[resource]]></property>
+          <property key="INPUT_TYPE_TABLE::rows"><![CDATA[0]]></property>
+          <property key="HIDDEN_SQLPARAM_TABLE::rows"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::1::column::TYPE_COLUMN"><![CDATA[nvarchar (String)]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::type"><![CDATA[table]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::row::0::column::HIDDEN_VARIABLE_VALUE"><![CDATA[1]]></property>
+          <property key="KEY_QUERY_TIMEOUT_SEC::type"><![CDATA[simple]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::row::0::column::HIDDEN_VARIABLE_NAME"><![CDATA[str_plm_key_I]]></property>
+          <property key="TYPE_TABLE::row::1::column::NAME_COLUMN"><![CDATA[etlUploadParentKey]]></property>
+          <property key="HIDDEN_SQLPARAM_TABLE::columns"><![CDATA[HIDDEN_SQLPARAM_NAME::HIDDEN_SQLPARAM_TYPE::HIDDEN_SQLPARAM_VALUE]]></property>
+          <property key="WIZARD_STATEMENT_XML::value"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sqlwizard><sqlStatement><![CDATA[SELECT
+	[DM_ETL_UPLOAD].etlUploadModel,
+	[DM_ETL_UPLOAD].etlUploadParentKey,
+	[DM_ETL_UPLOAD].etlUploadParentKeyValue,
+	[DM_ETL_UPLOAD].etlUploadFile_jshfilename
+FROM
+	[DM_ETL_UPLOAD]
+WHERE
+	[DM_ETL_UPLOAD].etlUploadId ='${str_plm_type_I}'
+]]]]><![CDATA[></sqlStatement><statementType><![CDATA[10]]]]><![CDATA[></statementType><tableAliasUtil><firstCharIndex><![CDATA[-1]]]]><![CDATA[></firstCharIndex><index><![CDATA[0]]]]><![CDATA[></index></tableAliasUtil><select><table x="60" y="15" ><name><![CDATA[[DM_ETL_UPLOAD]]]]]><![CDATA[></name></table><get count="4"><column key="1::name"><![CDATA[etlUploadModel]]]]><![CDATA[></column><column key="2::name"><![CDATA[etlUploadParentKey]]]]><![CDATA[></column><column key="3::name"><![CDATA[etlUploadParentKeyValue]]]]><![CDATA[></column><column key="4::name"><![CDATA[etlUploadFile_jshfilename]]]]><![CDATA[></column></get><where count="1"><column key="1::name"><![CDATA[etlUploadId]]]]><![CDATA[></column><column key="1::value"><![CDATA[='${str_plm_type_I}']]]]><![CDATA[></column></where></select></sqlwizard>]]></property>
+          <property key="XMLFW_LARGEDATA::value"><![CDATA[USE_SCRIPT_DEFAULT]]></property>
+          <property key="WIZARD::type"><![CDATA[simple]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::rows"><![CDATA[1]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::columns"><![CDATA[HIDDEN_VARIABLE_NAME::HIDDEN_VARIABLE_VALUE]]></property>
+          <property key="TYPE_TABLE::row::2::column::TYPE_COLUMN"><![CDATA[nvarchar (String)]]></property>
+          <property key="KEY_QUERY_TIMEOUT_ENABLED::type"><![CDATA[simple]]></property>
+        </operationProperties>
+      </base>
+      <name><![CDATA[Table参照_ul]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[144]]></locationX>
+        <locationY><![CDATA[48]]></locationY>
+        <index><![CDATA[17]]></index>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="i000001g7kl00v2rmfk9lga2n4sr" type="ScriptOriginComponent">
+      <name/>
+      <description/>
+      <base type="attributes">
+        <txAttr><![CDATA[2]]></txAttr>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[48]]></locationX>
+        <locationY><![CDATA[48]]></locationY>
+        <index><![CDATA[13]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="q000001g7kl00v2rmft4n658n4ss" type="ScriptCallComponent">
+      <name><![CDATA[script]]></name>
+      <extension type="attributes">
+        <inputTypes children="property" type="attributes">
+          <property key="str_ul_file_name_I"><![CDATA[string]]></property>
+        </inputTypes>
+        <inputRequireds children="property" type="attributes">
+          <property key="str_ul_file_name_I"><![CDATA[false]]></property>
+        </inputRequireds>
+        <outputTypes type="attributes"/>
+        <locationX><![CDATA[144]]></locationX>
+        <locationY><![CDATA[144]]></locationY>
+        <index><![CDATA[20]]></index>
+      </extension>
+      <base type="attributes">
+        <scriptParam children="property" type="attributes">
+          <property key="str_ul_file_name_I"><![CDATA[${str_ul_file_name_O}]]></property>
+        </scriptParam>
+        <projectOwner><![CDATA[bstakahashit]]></projectOwner>
+        <scriptName><![CDATA[S01_file_copy]]></scriptName>
+      </base>
+      <description/>
+    </memento>
+    <memento id="dq00001g7kl00v2rmf89lgb4n4sr" type="VariableProcessingComponent">
+      <name><![CDATA[DB_変数マッピング_ul]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[256]]></locationX>
+        <locationY><![CDATA[48]]></locationY>
+        <index><![CDATA[18]]></index>
+        <breakPoint><![CDATA[true]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+
+#Tue Jun 02 14:16:29 JST 2020
+
+GRID_SIZE=0
+
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputDocument0/>\r\n  <inputDocument1/>\r\n  <inputDocument2/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_ul_file_name_O,document(Table\u53C2\u7167_ul,main_data,/table/row/column[4]/text(),String)),setVariable(String,str_model_name_O,document(Table\u53C2\u7167_ul,main_data,/table/row/column[1]/text(),String)),setVariable(String,str_model_key_O,document(Table\u53C2\u7167_ul,main_data,/table/row/column[2]/text(),String)),setVariable(String,str_model_value_O,document(Table\u53C2\u7167_ul,main_data,/table/row/column[3]/text(),String)))
+
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_ul_file_name_O" type\="String"><links><ref id\="m200005g0nl00vep68pgd6oan2bn"/></links></outputVariable><outputVariable name\="str_model_name_O" type\="String"><links><ref id\="qs0000hg13l00s0p6128ikkmn1pi"/></links></outputVariable><outputVariable name\="str_model_key_O" type\="String"><links><ref id\="li0000hg13l00s0p6168iklmn1pi"/></links></outputVariable><outputVariable name\="str_model_value_O" type\="String"><links><ref id\="fq0000hg13l00s0p61c8ikmsn1pi"/></links></outputVariable></outputVariables><inputs><adapter adapterName\="Table\u53C2\u7167_ul" documentPropertyName\="main_data" schemaSynchronized\="true"><element comment\="" expanded\="true" id\="ke0000hg13l00s0p61coqnqkn1ph" predicate\="" qName\="table" type\="String"><element comment\="" expanded\="true" id\="qa0000hg13l00s0p612oqnrcn1ph" predicate\="" qName\="row" type\="String"><element comment\="etlUploadModel" expanded\="false" id\="qs0000hg13l00s0p6128ikkmn1pi" predicate\="1" qName\="column" type\="String"/><element comment\="etlUploadParentKey" expanded\="false" id\="li0000hg13l00s0p6168iklmn1pi" predicate\="2" qName\="column" type\="String"/><element comment\="etlUploadParentKeyValue" expanded\="false" id\="fq0000hg13l00s0p61c8ikmsn1pi" predicate\="3" qName\="column" type\="String"/><element comment\="etlUploadFile_jshfilename" expanded\="false" id\="m200005g0nl00vep68pgd6oan2bn" predicate\="4" qName\="column" type\="String"/></element></element></adapter></inputs></mapping>
+
+MAPPING_DOCUMENT=
+
+TYPE=variableMapper
+
+]]></model>
+      </base>
+    </memento>
+    <memento id="lm00001g7kl00v2rmfg9lg8gn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[S02_変数代入]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[560]]></locationX>
+        <locationY><![CDATA[320]]></locationY>
+        <index><![CDATA[19]]></index>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+
+#Tue Jun 02 14:16:29 JST 2020
+
+GRID_SIZE=0
+
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputDocument0/>\r\n  <inputDocument1/>\r\n  <inputDocument2/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_result_I,getProperty(S02_dm_customer_hub_list,String,str_result_O)),setVariable(String,str_message_I,getProperty(S02_dm_customer_hub_list,String,str_message_O)))
+
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_result_I" type\="String"><links><property componentName\="S02_dm_customer_hub_list" id\="nm0000rg2ul00s6rjs8m713gn3fp" propertyName\="str_result_O" type\="String"/></links></outputVariable><outputVariable name\="str_message_I" type\="String"><links><property componentName\="S02_dm_customer_hub_list" id\="co0000rg2ul00s6rjs0m712cn3fp" propertyName\="str_message_O" type\="String"/></links></outputVariable></outputVariables></mapping>
+
+MAPPING_DOCUMENT=
+
+TYPE=variableMapper
+
+]]></model>
+      </base>
+    </memento>
+    <memento id="j600001g7kl00v2rmf09lg98n4sr" type="VariableProcessingComponent">
+      <name><![CDATA[mapping]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+
+#Tue Jun 02 14:16:29 JST 2020
+
+FAST_CONVERTER_INFORMATION=<?xml version\="1.0" encoding\="UTF-8"?>\n<information><inputSchema></inputSchema><outputSchema><element name\="root"><attribute name\="type">singleLineStringConstant(object)</attribute><element name\="response"><attribute name\="type">singleLineStringConstant(object)</attribute><element name\="result">getVariable(String,str_result_I)<attribute name\="type"/></element><element name\="message">getVariable(String,str_message_I)<attribute name\="type"/></element></element></element></outputSchema></information>
+
+FAST_CONVERTER_NAME=xml2xml
+
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="document" version\="2.3"><output><element comment\="" expanded\="true" predicate\="" qName\="root" type\="String"><attribute comment\="" qName\="type" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="object" id\="ho0000lg28l00uip69hmqq56n1s4" type\="String" x\="575" y\="85"><field name\="constant" value\="object"/></logic></links></attribute><element comment\="" expanded\="true" predicate\="" qName\="response" type\="String"><attribute comment\="" qName\="type" type\="String"><links><ref id\="ho0000lg28l00uip69hmqq56n1s4"/></links></attribute><element comment\="" expanded\="true" predicate\="" qName\="result" type\="String"><links><null/><variable id\="qs0000rg2ul00s6rjs7nuko6n3fn" name\="str_result_I" type\="String"/></links><attribute comment\="" qName\="type" type\="String"/></element><element comment\="" expanded\="true" predicate\="" qName\="message" type\="String"><links><null/><variable id\="t00000rg2ul00s6rjs1nukpkn3fn" name\="str_message_I" type\="String"/></links><attribute comment\="" qName\="type" type\="String"/></element></element></element></output></mapping>
+
+TYPE=dataMapper
+
+INPUT_ADAPTER_DOCUMENT=
+
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+
+VARIABLES_MAPPER_INFORMATION=variables()
+
+INPUT_ADAPTER=
+
+GRID_SIZE=0
+
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[656]]></locationX>
+        <locationY><![CDATA[224]]></locationY>
+        <index><![CDATA[16]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="qc00001g7kl00v2rmf89lg6en4sr" type="ReturnComponent">
+      <name/>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[656]]></locationX>
+        <locationY><![CDATA[48]]></locationY>
+        <index><![CDATA[14]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="om00001g7kl00v2rmfg9lg7kn4sr" type="BranchComponent">
+      <name><![CDATA[if]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[144]]></locationX>
+        <locationY><![CDATA[240]]></locationY>
+        <index><![CDATA[1]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[560]]></endPointX>
+        <endPointY><![CDATA[224]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[lm00001g7kl00v2rmfg9lg8gn4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="cq00001g7kl00v2rmfa9lg3en4sr" type="ScriptCallComponent">
+      <name><![CDATA[S02_dm_customer_hub_list]]></name>
+      <description/>
+      <base type="attributes">
+        <scriptName><![CDATA[S02_dm_customer_hub_list]]></scriptName>
+        <scriptParam children="property" type="attributes">
+          <property key="str_key_I"><![CDATA[${str_plm_key_I}]]></property>
+          <property key="str_ul_file_name_I"><![CDATA[${str_ul_file_name_O}]]></property>
+          <property key="str_model_value_I"><![CDATA[${str_model_value_O}]]></property>
+          <property key="str_model_name_I"><![CDATA[${str_model_name_O}]]></property>
+          <property key="str_type_I"><![CDATA[${str_plm_type_I}]]></property>
+          <property key="str_model_key_I"><![CDATA[${str_model_key_O}]]></property>
+        </scriptParam>
+        <projectOwner><![CDATA[bstakahashit]]></projectOwner>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[400]]></locationX>
+        <locationY><![CDATA[320]]></locationY>
+        <index><![CDATA[15]]></index>
+        <breakPoint><![CDATA[true]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <manualIOConfiguration><![CDATA[false]]></manualIOConfiguration>
+        <inputTypes children="property" type="attributes">
+          <property key="str_key_I"><![CDATA[string]]></property>
+          <property key="str_ul_file_name_I"><![CDATA[string]]></property>
+          <property key="str_model_value_I"><![CDATA[string]]></property>
+          <property key="str_model_name_I"><![CDATA[string]]></property>
+          <property key="str_type_I"><![CDATA[string]]></property>
+          <property key="str_model_key_I"><![CDATA[string]]></property>
+        </inputTypes>
+        <outputTypes children="property" type="attributes">
+          <property key="str_uldl_table_name_O"><![CDATA[string]]></property>
+          <property key="xml_response_data_O"><![CDATA[xml]]></property>
+          <property key="str_message_O"><![CDATA[string]]></property>
+          <property key="xml_response_status_O"><![CDATA[xml]]></property>
+          <property key="xml_response_O"><![CDATA[xml]]></property>
+          <property key="str_result_O"><![CDATA[string]]></property>
+        </outputTypes>
+        <inputRequireds children="property" type="attributes">
+          <property key="str_key_I"><![CDATA[false]]></property>
+          <property key="str_ul_file_name_I"><![CDATA[false]]></property>
+          <property key="str_model_value_I"><![CDATA[false]]></property>
+          <property key="str_model_name_I"><![CDATA[false]]></property>
+          <property key="str_type_I"><![CDATA[false]]></property>
+          <property key="str_model_key_I"><![CDATA[false]]></property>
+        </inputRequireds>
+      </extension>
+    </memento>
+  </children>
+  <children type="variables">
+    <memento id="ce00001g7kl00v2rmfq9lgkkn4sr" type="Variable">
+      <name><![CDATA[str_am_model_number_request]]></name>
+      <base type="attributes">
+        <initialValue><![CDATA[AM_MODEL_NUMBER_REQUEST]]></initialValue>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[10]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="ia00001g7kl00v2rmfc9lgesn4sr" type="Variable">
+      <name><![CDATA[str_model_key_O]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[6]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="co00001g7kl00v2rmf49lgdcn4sr" type="Variable">
+      <name><![CDATA[xml_response_O]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[true]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[xml]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[1]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="j200001g7kl00v2rmf49lgm0n4sr" type="Variable">
+      <name><![CDATA[str_dm_customer_hub_list]]></name>
+      <base type="attributes">
+        <initialValue><![CDATA[DM_CUSTOMER_HUB_LIST]]></initialValue>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[9]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="u600001g7kl00v2rmfi9lgg4n4sr" type="Variable">
+      <name><![CDATA[str_result_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[2]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="q600001g7kl00v2rmfs9lglcn4sr" type="Variable">
+      <name><![CDATA[str_model_value_O]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[7]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="o400001g7kl00v2rmfg9lghsn4sr" type="Variable">
+      <name><![CDATA[str_plm_type_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[8]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="ai00001g7kl00v2rmf09lgfin4sr" type="Variable">
+      <name><![CDATA[str_plm_key_I]]></name>
+      <base type="attributes">
+        <initialValue><![CDATA[1002]]></initialValue>
+        <inputParam><![CDATA[true]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="ag00001g7kl00v2rmf49lgjcn4sr" type="Variable">
+      <name><![CDATA[str_ul_file_name_O]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[4]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="ls00001g7kl00v2rmfa9lgi6n4sr" type="Variable">
+      <name><![CDATA[str_model_name_O]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[5]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="fm00001g7kl00v2rmfs9lgnan4sr" type="Variable">
+      <name><![CDATA[str_message_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[3]]></index>
+      </extension>
+      <description/>
+    </memento>
+  </children>
+  <children type="relations">
+    <memento id="rs00001g7kl00v2rmft4vl4in4ss" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[q000001g7kl00v2rmft4n658n4ss]]></fromID>
+        <toID><![CDATA[om00001g7kl00v2rmfg9lg7kn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="ug00001g7kl00v2rmfr4tojon4ss" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[dq00001g7kl00v2rmf89lgb4n4sr]]></fromID>
+        <toID><![CDATA[q000001g7kl00v2rmft4n658n4ss]]></toID>
+      </base>
+    </memento>
+    <memento id="dk00001g7kl00v2rmfc9lgtkn4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[cq00001g7kl00v2rmfa9lg3en4sr]]></fromID>
+        <toID><![CDATA[lm00001g7kl00v2rmfg9lg8gn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="t400001g7kl00v2rmfc9lgqsn4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[i000001g7kl00v2rmfk9lga2n4sr]]></fromID>
+        <toID><![CDATA[kk00001g7kl00v2rmfs9lg44n4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="pk00001g7kl00v2rmfs9lh1gn4sr" type="BranchFlow">
+      <description><![CDATA[DM_CUSTOMER_HUB_LIST]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals(compareTo0.stringValue()));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithVariable]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_model_name_O]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0><![CDATA[str_dm_customer_hub_list]]]]><![CDATA[></compareTo0>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_model_name_O]]></property>
+          <property key="compareTo0"><![CDATA[str_dm_customer_hub_list]]></property>
+        </args>
+        <fromID><![CDATA[om00001g7kl00v2rmfg9lg7kn4sr]]></fromID>
+        <toID><![CDATA[cq00001g7kl00v2rmfa9lg3en4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[144]]></conditionLocationX>
+        <conditionLocationY><![CDATA[320]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="j200001g7kl00v2rmfo9lgr2n4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[kk00001g7kl00v2rmfs9lg44n4sr]]></fromID>
+        <toID><![CDATA[dq00001g7kl00v2rmf89lgb4n4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="kk00001g7kl00v2rmf29lgpen4sr" type="DataFlow">
+      <base type="attributes">
+        <fromName><![CDATA[main_data]]></fromName>
+        <toName><![CDATA[xml_response_O]]></toName>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <fromID><![CDATA[j600001g7kl00v2rmf09lg98n4sr]]></fromID>
+        <toID><![CDATA[qc00001g7kl00v2rmf89lg6en4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+    </memento>
+    <memento id="ke00001g7kl00v2rmfe9lgoen4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[j600001g7kl00v2rmf09lg98n4sr]]></fromID>
+        <toID><![CDATA[qc00001g7kl00v2rmf89lg6en4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="jq00001g7kl00v2rmfk9lh08n4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[om00001g7kl00v2rmfg9lg7kn4sr]]></fromID>
+        <toID><![CDATA[j600001g7kl00v2rmf09lg98n4sr]]></toID>
+      </base>
+    </memento>
+  </children>
+</script>

@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<script>
+  <memento>
+    <option type="attributes">
+      <DATA_PROCESSING_CONNECTION_OPTION_XMLFW_CONF><![CDATA[false]]></DATA_PROCESSING_CONNECTION_OPTION_XMLFW_CONF>
+    </option>
+    <extension type="attributes">
+      <created><![CDATA[1591162238646]]></created>
+      <lastUpdated><![CDATA[1591245151255]]></lastUpdated>
+      <testArgumentValues children="property" type="attributes"/>
+      <migrationFlows type="attributes"/>
+      <gridSize><![CDATA[16]]></gridSize>
+    </extension>
+  </memento>
+  <children type="components">
+    <memento id="l800001g7kl00v2rmfgn1uv8n4u6" type="VariableProcessingComponent">
+      <name><![CDATA[db_mapping]]></name>
+      <extension type="attributes">
+        <inputPSPSupported><![CDATA[true]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[true]]></outputPSPSupported>
+        <locationX><![CDATA[544]]></locationX>
+        <locationY><![CDATA[112]]></locationY>
+        <index><![CDATA[6]]></index>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <outputGlobalSchemaName/>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+#Thu Jun 04 10:33:23 JST 2020
+FAST_CONVERTER_INFORMATION=simple(value(BigDecimal,column(int,0)),value(BigDecimal,column(int,1)),value(BigDecimal,column(int,2)),value(BigDecimal,column(int,3)),value(BigDecimal,column(int,4)),value(BigDecimal,column(int,5)),value(String,column(String,6)),value(Date,column(Date,7)),value(String,column(String,8)),value(Date,column(Date,9)),value(Date,iso8601ToCustom(now(),yyyy/MM/dd HH\:mm\:ss)))
+FAST_CONVERTER_NAME=expressionInput
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="document" version\="2.3"><output><element comment\="" expanded\="true" predicate\="" qName\="table" type\="String"><element comment\="" expanded\="true" predicate\="" qName\="row" type\="String"><links><logic class\="com.appresso.ds.mapper.model.SimpleLoopIcon" comment\="" id\="hs00001g7kl00v2rmf0nb1o4n4u6" type\="String" x\="16" y\="16"><links><ref id\="tm00001g7kl00v2rmf2n60ian4u6"/></links></logic><null/></links><element comment\="customerHubList" expanded\="false" predicate\="1" qName\="column" type\="BigDecimal"><links><null/><ref id\="tm00001g7kl00v2rmfan60jsn4u6"/></links></element><element comment\="constructionBaseId" expanded\="false" predicate\="2" qName\="column" type\="BigDecimal"><links><null/><ref id\="hs00001g7kl00v2rmfsn60k8n4u6"/></links></element><element comment\="checkBaseId" expanded\="false" predicate\="3" qName\="column" type\="BigDecimal"><links><null/><ref id\="je00001g7kl00v2rmfan60lon4u6"/></links></element><element comment\="failureBaseId" expanded\="false" predicate\="4" qName\="column" type\="BigDecimal"><links><null/><ref id\="jg00001g7kl00v2rmfmn60m4n4u6"/></links></element><element comment\="customerCode" expanded\="false" predicate\="5" qName\="column" type\="BigDecimal"><links><null/><ref id\="ra00001g7kl00v2rmfmn60nmn4u6"/></links></element><element comment\="customerHubCode" expanded\="false" predicate\="6" qName\="column" type\="BigDecimal"><links><null/><ref id\="v200001g7kl00v2rmfan60oin4u6"/></links></element><element comment\="insertuser" expanded\="false" predicate\="7" qName\="column" type\="String"><links><null/><ref id\="v600001g7kl00v2rmfcn60p6n4u6"/></links></element><element comment\="insertdatetime" expanded\="false" predicate\="8" qName\="column" type\="Date"><links><null/><ref id\="rg00001g7kl00v2rmf8n60qmn4u6"/></links></element><element comment\="updateuser" expanded\="false" predicate\="9" qName\="column" type\="String"><links><null/><ref id\="l000001g7kl00v2rmfqn60r8n4u6"/></links></element><element comment\="updatedatetime" expanded\="false" predicate\="10" qName\="column" type\="Date"><links><null/><ref id\="bo00001g7kl00v2rmf4n60smn4u6"/></links></element><element comment\="createdatetime" expanded\="false" predicate\="11" qName\="column" type\="Date"><links><null/><logic class\="com.appresso.ds.mapper.model.ExtendedFunctionIcon$Iso8601ToCustomIcon" comment\="" id\="q000001g7kl00v2rmfn5600an4v7" type\="String" x\="181" y\="377"><field name\="format" value\="yyyy/MM/dd HH\:mm\:ss"/><links><logic class\="com.appresso.ds.mapper.model.ExtendedFunctionIcon$NowIcon" comment\="" id\="si00001g7kl00v2rmfn2c50in4v7" type\="String" x\="86" y\="391"/></links></logic></links></element></element></element></output><input schemaSynchronized\="true"><element comment\="" expanded\="true" id\="v200001g7kl00v2rmf2n60hsn4u6" predicate\="" qName\="table" type\="String"><element comment\="" expanded\="true" id\="tm00001g7kl00v2rmf2n60ian4u6" predicate\="" qName\="row" type\="String"><element comment\="customerHubList" expanded\="false" id\="tm00001g7kl00v2rmfan60jsn4u6" predicate\="1" qName\="column" type\="int"/><element comment\="constructionBaseId" expanded\="false" id\="hs00001g7kl00v2rmfsn60k8n4u6" predicate\="2" qName\="column" type\="int"/><element comment\="checkBaseId" expanded\="false" id\="je00001g7kl00v2rmfan60lon4u6" predicate\="3" qName\="column" type\="int"/><element comment\="failureBaseId" expanded\="false" id\="jg00001g7kl00v2rmfmn60m4n4u6" predicate\="4" qName\="column" type\="int"/><element comment\="customerCode" expanded\="false" id\="ra00001g7kl00v2rmfmn60nmn4u6" predicate\="5" qName\="column" type\="int"/><element comment\="customerHubCode" expanded\="false" id\="v200001g7kl00v2rmfan60oin4u6" predicate\="6" qName\="column" type\="int"/><element comment\="insertuser" expanded\="false" id\="v600001g7kl00v2rmfcn60p6n4u6" predicate\="7" qName\="column" type\="String"/><element comment\="insertdatetime" expanded\="false" id\="rg00001g7kl00v2rmf8n60qmn4u6" predicate\="8" qName\="column" type\="Date"/><element comment\="updateuser" expanded\="false" id\="l000001g7kl00v2rmfqn60r8n4u6" predicate\="9" qName\="column" type\="String"/><element comment\="updatedatetime" expanded\="false" id\="bo00001g7kl00v2rmf4n60smn4u6" predicate\="10" qName\="column" type\="Date"/></element></element></input></mapping>
+TYPE=dataMapper
+INPUT_ADAPTER_DOCUMENT=main_data
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputDocument/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+MAPPING_DOCUMENT=
+VARIABLES_MAPPER_INFORMATION=variables()
+GRID_SIZE=0
+INPUT_ADAPTER=get_dm_customert_hub_list
+]]></model>
+      </base>
+    </memento>
+    <memento id="u200001g7kl00v2rmf18ojc8n4u9" type="VariableProcessingComponent">
+      <name><![CDATA[Delete_Error_mapping]]></name>
+      <extension type="attributes">
+        <inputPSPSupported><![CDATA[true]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[true]]></outputPSPSupported>
+        <locationX><![CDATA[320]]></locationX>
+        <locationY><![CDATA[208]]></locationY>
+        <index><![CDATA[16]]></index>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <outputGlobalSchemaName/>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+#Thu Jun 04 10:22:41 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables()
+FAST_CONVERTER_INFORMATION=no(value(String,getVariable(String,err_msg)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="document" version\="2.3"><output><element comment\="" expanded\="true" predicate\="" qName\="table" type\="String"><element comment\="" expanded\="true" predicate\="" qName\="row" type\="String"><element comment\="msg" expanded\="false" predicate\="" qName\="column" type\="String"><links><null/><variable id\="le00001g7kl00v2rmfhbbcb4n4u9" name\="err_msg" type\="String"/></links></element></element></element></output></mapping>
+MAPPING_DOCUMENT=
+FAST_CONVERTER_NAME=expressionInput
+TYPE=dataMapper
+]]></model>
+      </base>
+    </memento>
+    <memento id="oq00001g7kl00v2rmf2fh9bkn4u9" type="DataProcessingCallComponent">
+      <base type="attributes">
+        <moduleName><![CDATA[csv_adapter]]></moduleName>
+        <operationName><![CDATA[put_data]]></operationName>
+        <operationProperties children="property" type="attributes">
+          <property key="DELIMITER_DIRECT::value"/>
+          <property key="DELIMITER_MODE::value"><![CDATA[DELIMITER_MODE_LIST_VALUE]]></property>
+          <property key="COLUMNS::row::0::column::COLUMN_QUOTED"><![CDATA[false]]></property>
+          <property key="NOT_INSERT_FIRST_LINE_FILE_EXIST::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHARSET::type"><![CDATA[simple]]></property>
+          <property key="APPEND::type"><![CDATA[simple]]></property>
+          <property key="COLUMNS::type"><![CDATA[table]]></property>
+          <property key="SUPPORTS_TX::type"><![CDATA[simple]]></property>
+          <property key="OVER_WRITE_MODE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_DIRECT::type"><![CDATA[simple]]></property>
+          <property key="SUPPORTS_TX::value"><![CDATA[false]]></property>
+          <property key="APPEND::value"><![CDATA[false]]></property>
+          <property key="DELIMITER_MODE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHARSET::value"/>
+          <property key="COLUMNS::columns"><![CDATA[COLUMN_NAME::COLUMN_QUOTED]]></property>
+          <property key="FILE_PATH::type"><![CDATA[simple]]></property>
+          <property key="NEW_LINE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHAR::type"><![CDATA[simple]]></property>
+          <property key="CHARSET::type"><![CDATA[simple]]></property>
+          <property key="OVER_WRITE_MODE::value"><![CDATA[true]]></property>
+          <property key="NEW_LINE::value"><![CDATA[AUTO]]></property>
+          <property key="DELIMITER_CHAR::value"><![CDATA[,]]></property>
+          <property key="NOT_INSERT_FIRST_LINE_FILE_EXIST::value"><![CDATA[false]]></property>
+          <property key="INSERT_FIRST_LINE::value"><![CDATA[false]]></property>
+          <property key="FILE_PATH::value"><![CDATA[/data/DrSum_Error.csv]]></property>
+          <property key="COLUMNS::row::0::column::COLUMN_NAME"><![CDATA[msg]]></property>
+          <property key="CHARSET::value"><![CDATA[Windows-31J]]></property>
+          <property key="INSERT_FIRST_LINE::type"><![CDATA[simple]]></property>
+          <property key="COLUMNS::rows"><![CDATA[1]]></property>
+        </operationProperties>
+      </base>
+      <name><![CDATA[Insert_write]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[432]]></locationX>
+        <locationY><![CDATA[448]]></locationY>
+        <index><![CDATA[14]]></index>
+        <breakPoint><![CDATA[true]]></breakPoint>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="s000001g7kl00v2rmfplufb6n4u5" type="DataProcessingCallComponent">
+      <base type="attributes">
+        <moduleName><![CDATA[sqlserver_adapter]]></moduleName>
+        <operationName><![CDATA[get_table_data]]></operationName>
+        <operationProperties children="property" type="attributes">
+          <property key="TYPE_TABLE::row::6::column::TYPE_COLUMN"><![CDATA[nvarchar (String)]]></property>
+          <property key="TABLE_NAME_ESCAPE::value"><![CDATA[false]]></property>
+          <property key="KEY_QUERY_TIMEOUT_SEC::type"><![CDATA[simple]]></property>
+          <property key="TYPE_TABLE::row::0::column::NAME_COLUMN"><![CDATA[customerHubList]]></property>
+          <property key="TYPE_TABLE::row::6::column::NAME_COLUMN"><![CDATA[insertuser]]></property>
+          <property key="TYPE_TABLE::rows"><![CDATA[10]]></property>
+          <property key="TYPE_TABLE::columns"><![CDATA[TARGET_COLUMN::NAME_COLUMN::TYPE_COLUMN]]></property>
+          <property key="TYPE_TABLE::row::5::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::5::column::TYPE_COLUMN"><![CDATA[int (int)]]></property>
+          <property key="TYPE_TABLE::row::0::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::5::column::NAME_COLUMN"><![CDATA[customerHubCode]]></property>
+          <property key="TYPE_TABLE::row::9::column::TYPE_COLUMN"><![CDATA[datetime2 (Date)]]></property>
+          <property key="KEY_QUERY_TIMEOUT_ENABLED::value"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::4::column::TYPE_COLUMN"><![CDATA[int (int)]]></property>
+          <property key="TYPE_TABLE::row::4::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::4::column::NAME_COLUMN"><![CDATA[customerCode]]></property>
+          <property key="XMLFW_LARGEDATA::type"><![CDATA[simple]]></property>
+          <property key="TYPE_TABLE::row::3::column::TYPE_COLUMN"><![CDATA[int (int)]]></property>
+          <property key="TYPE_TABLE::row::9::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::3::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::3::column::NAME_COLUMN"><![CDATA[failureBaseId]]></property>
+          <property key="TYPE_TABLE::row::9::column::NAME_COLUMN"><![CDATA[updatedatetime]]></property>
+          <property key="TABLE_NAME::value"><![CDATA[DM_CUSTOMER_HUB_LIST]]></property>
+          <property key="TYPE_TABLE::row::2::column::TYPE_COLUMN"><![CDATA[int (int)]]></property>
+          <property key="TYPE_TABLE::row::8::column::TYPE_COLUMN"><![CDATA[nvarchar (String)]]></property>
+          <property key="KEY_QUERY_TIMEOUT_SEC::value"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::7::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::2::column::NAME_COLUMN"><![CDATA[checkBaseId]]></property>
+          <property key="TYPE_TABLE::row::8::column::NAME_COLUMN"><![CDATA[updateuser]]></property>
+          <property key="TYPE_TABLE::row::8::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="CONNECTION::value"><![CDATA[dvdb]]></property>
+          <property key="TYPE_TABLE::row::2::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="CONNECTION::type"><![CDATA[resource]]></property>
+          <property key="XMLFW_LARGEDATA::value"><![CDATA[USE_SCRIPT_DEFAULT]]></property>
+          <property key="TYPE_TABLE::type"><![CDATA[table]]></property>
+          <property key="TYPE_TABLE::row::1::column::TYPE_COLUMN"><![CDATA[int (int)]]></property>
+          <property key="TYPE_TABLE::row::7::column::TYPE_COLUMN"><![CDATA[datetime2 (Date)]]></property>
+          <property key="TYPE_TABLE::row::1::column::NAME_COLUMN"><![CDATA[constructionBaseId]]></property>
+          <property key="TARGET_COLUMN_VERIFY_PARAMETER::value"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::7::column::NAME_COLUMN"><![CDATA[insertdatetime]]></property>
+          <property key="TARGET_COLUMN_VERIFY_PARAMETER::type"><![CDATA[simple]]></property>
+          <property key="TYPE_TABLE::row::6::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TABLE_NAME::type"><![CDATA[simple]]></property>
+          <property key="TYPE_TABLE::row::1::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="KEY_QUERY_TIMEOUT_ENABLED::type"><![CDATA[simple]]></property>
+          <property key="TABLE_NAME_ESCAPE::type"><![CDATA[simple]]></property>
+          <property key="TYPE_TABLE::row::0::column::TYPE_COLUMN"><![CDATA[int (int)]]></property>
+        </operationProperties>
+      </base>
+      <name><![CDATA[get_dm_customert_hub_list]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[432]]></locationX>
+        <locationY><![CDATA[112]]></locationY>
+        <index><![CDATA[3]]></index>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="l000001g7kl00v2rmfehtkoon4u5" type="ScriptOriginComponent">
+      <extension type="attributes">
+        <index><![CDATA[1]]></index>
+        <locationX><![CDATA[16]]></locationX>
+        <locationY><![CDATA[16]]></locationY>
+      </extension>
+      <base type="attributes"/>
+    </memento>
+    <memento id="hg00001g7kl00v2rmfssuj1on4ua" type="VariableProcessingComponent">
+      <name><![CDATA[Create_Error_mapping]]></name>
+      <extension type="attributes">
+        <inputPSPSupported><![CDATA[true]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[true]]></outputPSPSupported>
+        <locationX><![CDATA[320]]></locationX>
+        <locationY><![CDATA[288]]></locationY>
+        <index><![CDATA[17]]></index>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <outputGlobalSchemaName/>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+
+#Wed Jun 03 17:32:28 JST 2020
+
+GRID_SIZE=0
+
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+
+VARIABLES_MAPPER_INFORMATION=variables()
+
+FAST_CONVERTER_INFORMATION=no(value(String,getVariable(String,err_msg)))
+
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="document" version\="2.3"><output><element comment\="" expanded\="true" predicate\="" qName\="table" type\="String"><element comment\="" expanded\="true" predicate\="" qName\="row" type\="String"><element comment\="msg" expanded\="false" predicate\="" qName\="column" type\="String"><links><null/><variable id\="le00001g7kl00v2rmfhbbcb4n4u9" name\="err_msg" type\="String"/></links></element></element></element></output></mapping>
+
+MAPPING_DOCUMENT=
+
+FAST_CONVERTER_NAME=expressionInput
+
+TYPE=dataMapper
+
+]]></model>
+      </base>
+    </memento>
+    <memento id="ji00001g7kl00v2rmfqsuo0mn4ua" type="VariableProcessingComponent">
+      <name><![CDATA[Create_Error_msg]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[208]]></locationX>
+        <locationY><![CDATA[288]]></locationY>
+        <index><![CDATA[18]]></index>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+
+#Wed Jun 03 17:32:53 JST 2020
+
+GRID_SIZE=0
+
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputDocument0/>\r\n  <inputDocument1/>\r\n  <inputDocument2/>\r\n  <inputDocument3/>\r\n  <inputDocument4/>\r\n  <inputDocument5/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,err_msg,singleLineStringConstant(\u30C6\u30FC\u30D6\u30EB\u4F5C\u6210\u30A8\u30E9\u30FC\u767A\u751F\u3002)))
+
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="err_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="" id\="o400001g7kl00v2rmfra1ooan4u9" type\="String" x\="271" y\="66"><field name\="constant" value\="\u30C6\u30FC\u30D6\u30EB\u4F5C\u6210\u30A8\u30E9\u30FC\u767A\u751F\u3002"/></logic></links></outputVariable></outputVariables></mapping>
+
+MAPPING_DOCUMENT=
+
+TYPE=variableMapper
+
+]]></model>
+      </base>
+    </memento>
+    <memento id="lq00001g7kl00v2rmfoa43cin4u9" type="DataProcessingCallComponent">
+      <base type="attributes">
+        <moduleName><![CDATA[csv_adapter]]></moduleName>
+        <operationName><![CDATA[put_data]]></operationName>
+        <operationProperties children="property" type="attributes">
+          <property key="DELIMITER_DIRECT::value"/>
+          <property key="DELIMITER_MODE::value"><![CDATA[DELIMITER_MODE_LIST_VALUE]]></property>
+          <property key="COLUMNS::row::0::column::COLUMN_QUOTED"><![CDATA[false]]></property>
+          <property key="NOT_INSERT_FIRST_LINE_FILE_EXIST::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHARSET::type"><![CDATA[simple]]></property>
+          <property key="APPEND::type"><![CDATA[simple]]></property>
+          <property key="COLUMNS::type"><![CDATA[table]]></property>
+          <property key="SUPPORTS_TX::type"><![CDATA[simple]]></property>
+          <property key="OVER_WRITE_MODE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_DIRECT::type"><![CDATA[simple]]></property>
+          <property key="SUPPORTS_TX::value"><![CDATA[false]]></property>
+          <property key="APPEND::value"><![CDATA[false]]></property>
+          <property key="DELIMITER_MODE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHARSET::value"/>
+          <property key="COLUMNS::columns"><![CDATA[COLUMN_NAME::COLUMN_QUOTED]]></property>
+          <property key="FILE_PATH::type"><![CDATA[simple]]></property>
+          <property key="NEW_LINE::type"><![CDATA[simple]]></property>
+          <property key="CHARSET::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHAR::type"><![CDATA[simple]]></property>
+          <property key="OVER_WRITE_MODE::value"><![CDATA[true]]></property>
+          <property key="NEW_LINE::value"><![CDATA[AUTO]]></property>
+          <property key="DELIMITER_CHAR::value"><![CDATA[,]]></property>
+          <property key="NOT_INSERT_FIRST_LINE_FILE_EXIST::value"><![CDATA[false]]></property>
+          <property key="INSERT_FIRST_LINE::value"><![CDATA[false]]></property>
+          <property key="FILE_PATH::value"><![CDATA[/data/DrSum_Error.csv]]></property>
+          <property key="COLUMNS::row::0::column::COLUMN_NAME"><![CDATA[msg]]></property>
+          <property key="CHARSET::value"><![CDATA[Windows-31J]]></property>
+          <property key="INSERT_FIRST_LINE::type"><![CDATA[simple]]></property>
+          <property key="COLUMNS::rows"><![CDATA[1]]></property>
+        </operationProperties>
+      </base>
+      <name><![CDATA[Create_write]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[432]]></locationX>
+        <locationY><![CDATA[288]]></locationY>
+        <index><![CDATA[12]]></index>
+        <breakPoint><![CDATA[true]]></breakPoint>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="bq00001g7kl00v2rmfabt0ikn4u9" type="DataProcessingCallComponent">
+      <base type="attributes">
+        <moduleName><![CDATA[csv_adapter]]></moduleName>
+        <operationName><![CDATA[put_data]]></operationName>
+        <operationProperties children="property" type="attributes">
+          <property key="DELIMITER_DIRECT::value"/>
+          <property key="DELIMITER_MODE::value"><![CDATA[DELIMITER_MODE_LIST_VALUE]]></property>
+          <property key="COLUMNS::row::0::column::COLUMN_QUOTED"><![CDATA[false]]></property>
+          <property key="NOT_INSERT_FIRST_LINE_FILE_EXIST::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHARSET::type"><![CDATA[simple]]></property>
+          <property key="APPEND::type"><![CDATA[simple]]></property>
+          <property key="COLUMNS::type"><![CDATA[table]]></property>
+          <property key="SUPPORTS_TX::type"><![CDATA[simple]]></property>
+          <property key="OVER_WRITE_MODE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_DIRECT::type"><![CDATA[simple]]></property>
+          <property key="SUPPORTS_TX::value"><![CDATA[false]]></property>
+          <property key="APPEND::value"><![CDATA[false]]></property>
+          <property key="DELIMITER_MODE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHARSET::value"/>
+          <property key="COLUMNS::columns"><![CDATA[COLUMN_NAME::COLUMN_QUOTED]]></property>
+          <property key="FILE_PATH::type"><![CDATA[simple]]></property>
+          <property key="NEW_LINE::type"><![CDATA[simple]]></property>
+          <property key="CHARSET::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHAR::type"><![CDATA[simple]]></property>
+          <property key="OVER_WRITE_MODE::value"><![CDATA[true]]></property>
+          <property key="NEW_LINE::value"><![CDATA[AUTO]]></property>
+          <property key="DELIMITER_CHAR::value"><![CDATA[,]]></property>
+          <property key="NOT_INSERT_FIRST_LINE_FILE_EXIST::value"><![CDATA[false]]></property>
+          <property key="INSERT_FIRST_LINE::value"><![CDATA[false]]></property>
+          <property key="FILE_PATH::value"><![CDATA[/data/DrSum_Error.csv]]></property>
+          <property key="COLUMNS::row::0::column::COLUMN_NAME"><![CDATA[msg]]></property>
+          <property key="CHARSET::value"><![CDATA[Windows-31J]]></property>
+          <property key="INSERT_FIRST_LINE::type"><![CDATA[simple]]></property>
+          <property key="COLUMNS::rows"><![CDATA[1]]></property>
+        </operationProperties>
+      </base>
+      <name><![CDATA[get_write]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[432]]></locationX>
+        <locationY><![CDATA[368]]></locationY>
+        <index><![CDATA[13]]></index>
+        <breakPoint><![CDATA[true]]></breakPoint>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="d600001g7kl00v2rmfq6tt08n4u6" type="DataProcessingCallComponent">
+      <base type="attributes">
+        <moduleName><![CDATA[drsum_adapter]]></moduleName>
+        <operationName><![CDATA[execute_update_query]]></operationName>
+        <operationProperties children="property" type="attributes">
+          <property key="TYPE_TABLE::columns"><![CDATA[NAME_COLUMN::TYPE_COLUMN]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::type"><![CDATA[table]]></property>
+          <property key="HIDDEN_SQLPARAM_TABLE::type"><![CDATA[table]]></property>
+          <property key="TYPE_TABLE::type"><![CDATA[table]]></property>
+          <property key="WIZARD::type"><![CDATA[simple]]></property>
+          <property key="WIZARD_STATEMENT_XML::value"/>
+          <property key="HIDDEN_SQLPARAM_TABLE::columns"><![CDATA[HIDDEN_SQLPARAM_NAME::HIDDEN_SQLPARAM_TYPE::HIDDEN_SQLPARAM_VALUE]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::rows"><![CDATA[0]]></property>
+          <property key="WIZARD::value"><![CDATA[CREATE TABLE Sample_DM_CUSTOMER_HUB_LIST (
+	customerHubList NUMERIC NOT NULL UNIQUE ,
+	constructionBaseId NUMERIC(33,0),
+	checkBaseId NUMERIC(33,0),
+	failureBaseId NUMERIC(33,0),
+	customerCode NUMERIC(33,0),
+	customerHubCode NUMERIC(33,0),
+	insertuser VARCHAR(255),
+	insertdatetime TIMESTAMP,
+	updateuser VARCHAR(255),
+	updatedatetime TIMESTAMP,
+	createdatetime TIMESTAMP);
+]]></property>
+          <property key="HIDDEN_SQLPARAM_TABLE::rows"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::rows"><![CDATA[0]]></property>
+          <property key="CONNECTION::type"><![CDATA[resource]]></property>
+          <property key="WIZARD_STATEMENT_XML::type"><![CDATA[simple]]></property>
+          <property key="CONNECTION::value"><![CDATA[DSM_dwh]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::columns"><![CDATA[HIDDEN_VARIABLE_NAME::HIDDEN_VARIABLE_VALUE]]></property>
+        </operationProperties>
+      </base>
+      <name><![CDATA[Create_Table]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[320]]></locationX>
+        <locationY><![CDATA[112]]></locationY>
+        <index><![CDATA[5]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="t200001g7kl00v2rmfkvl7msn4ua" type="VariableProcessingComponent">
+      <name><![CDATA[Insert_Error_msg]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[208]]></locationX>
+        <locationY><![CDATA[448]]></locationY>
+        <index><![CDATA[22]]></index>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+#Thu Jun 04 13:26:32 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputDocument0/>\r\n  <inputDocument1/>\r\n  <inputDocument2/>\r\n  <inputDocument3/>\r\n  <inputDocument4/>\r\n  <inputDocument5/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,err_msg,singleLineStringConstant(\u30C6\u30FC\u30D6\u30EB\u633F\u5165\u30A8\u30E9\u30FC\u767A\u751F\u3002)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="err_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="" id\="o400001g7kl00v2rmfra1ooan4u9" type\="String" x\="271" y\="66"><field name\="constant" value\="\u30C6\u30FC\u30D6\u30EB\u633F\u5165\u30A8\u30E9\u30FC\u767A\u751F\u3002"/></logic></links></outputVariable></outputVariables></mapping>
+MAPPING_DOCUMENT=
+TYPE=variableMapper
+]]></model>
+      </base>
+    </memento>
+    <memento id="h200001g7kl00v2rmf3mduccn4u8" type="TryCatchFinallyComponent">
+      <name><![CDATA[try_catch]]></name>
+      <extension type="attributes">
+        <endLineSourceComps type="list">
+          <entry><![CDATA[lq00001g7kl00v2rmfoa43cin4u9]]></entry>
+          <entry><![CDATA[o800001g7kl00v2rmfq1quken4u6]]></entry>
+          <entry><![CDATA[bi00001g7kl00v2rmfc8r0f2n4u9]]></entry>
+          <entry><![CDATA[bq00001g7kl00v2rmfabt0ikn4u9]]></entry>
+          <entry><![CDATA[oq00001g7kl00v2rmf2fh9bkn4u9]]></entry>
+        </endLineSourceComps>
+        <locationX><![CDATA[112]]></locationX>
+        <locationY><![CDATA[16]]></locationY>
+        <index><![CDATA[9]]></index>
+        <endPointX><![CDATA[752]]></endPointX>
+        <endPointY><![CDATA[192]]></endPointY>
+      </extension>
+    </memento>
+    <memento id="fm00001g7kl00v2rmfjbojk6n4u6" type="DataProcessingCallComponent">
+      <base type="attributes">
+        <moduleName><![CDATA[drsum_adapter]]></moduleName>
+        <operationName><![CDATA[execute_update_query]]></operationName>
+        <operationProperties children="property" type="attributes">
+          <property key="TYPE_TABLE::columns"><![CDATA[NAME_COLUMN::TYPE_COLUMN]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::type"><![CDATA[table]]></property>
+          <property key="HIDDEN_SQLPARAM_TABLE::type"><![CDATA[table]]></property>
+          <property key="TYPE_TABLE::type"><![CDATA[table]]></property>
+          <property key="WIZARD::type"><![CDATA[simple]]></property>
+          <property key="WIZARD_STATEMENT_XML::value"/>
+          <property key="HIDDEN_SQLPARAM_TABLE::columns"><![CDATA[HIDDEN_SQLPARAM_NAME::HIDDEN_SQLPARAM_TYPE::HIDDEN_SQLPARAM_VALUE]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::rows"><![CDATA[0]]></property>
+          <property key="HIDDEN_SQLPARAM_TABLE::rows"><![CDATA[0]]></property>
+          <property key="WIZARD::value"><![CDATA[DROP TABLE IF EXISTS Sample_DM_CUSTOMER_HUB_LIST;]]></property>
+          <property key="CONNECTION::type"><![CDATA[resource]]></property>
+          <property key="TYPE_TABLE::rows"><![CDATA[0]]></property>
+          <property key="CONNECTION::value"><![CDATA[DSM_dwh]]></property>
+          <property key="WIZARD_STATEMENT_XML::type"><![CDATA[simple]]></property>
+          <property key="HIDDEN_VARIABLE_TABLE::columns"><![CDATA[HIDDEN_VARIABLE_NAME::HIDDEN_VARIABLE_VALUE]]></property>
+        </operationProperties>
+      </base>
+      <name><![CDATA[Delete_Table]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[224]]></locationX>
+        <locationY><![CDATA[112]]></locationY>
+        <index><![CDATA[7]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="hm00001g7kl00v2rmfavkppin4ua" type="VariableProcessingComponent">
+      <name><![CDATA[Insert_Error_mapping]]></name>
+      <extension type="attributes">
+        <inputPSPSupported><![CDATA[true]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[true]]></outputPSPSupported>
+        <locationX><![CDATA[320]]></locationX>
+        <locationY><![CDATA[448]]></locationY>
+        <index><![CDATA[20]]></index>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <outputGlobalSchemaName/>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+#Thu Jun 04 13:26:32 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables()
+FAST_CONVERTER_INFORMATION=no(value(String,getVariable(String,err_msg)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="document" version\="2.3"><output><element comment\="" expanded\="true" predicate\="" qName\="table" type\="String"><element comment\="" expanded\="true" predicate\="" qName\="row" type\="String"><element comment\="msg" expanded\="false" predicate\="" qName\="column" type\="String"><links><null/><variable id\="le00001g7kl00v2rmfhbbcb4n4u9" name\="err_msg" type\="String"/></links></element></element></element></output></mapping>
+MAPPING_DOCUMENT=
+FAST_CONVERTER_NAME=expressionInput
+TYPE=dataMapper
+]]></model>
+      </base>
+    </memento>
+    <memento id="jk00001g7kl00v2rmfkvl03qn4ua" type="VariableProcessingComponent">
+      <name><![CDATA[get_Error_msg]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[208]]></locationX>
+        <locationY><![CDATA[368]]></locationY>
+        <index><![CDATA[21]]></index>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+
+#Wed Jun 03 17:35:23 JST 2020
+
+GRID_SIZE=0
+
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputDocument0/>\r\n  <inputDocument1/>\r\n  <inputDocument2/>\r\n  <inputDocument3/>\r\n  <inputDocument4/>\r\n  <inputDocument5/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,err_msg,singleLineStringConstant(\u30C6\u30FC\u30D6\u30EB\u62BD\u51FA\u30A8\u30E9\u30FC\u767A\u751F\u3002)))
+
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="err_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="" id\="o400001g7kl00v2rmfra1ooan4u9" type\="String" x\="271" y\="66"><field name\="constant" value\="\u30C6\u30FC\u30D6\u30EB\u62BD\u51FA\u30A8\u30E9\u30FC\u767A\u751F\u3002"/></logic></links></outputVariable></outputVariables></mapping>
+
+MAPPING_DOCUMENT=
+
+TYPE=variableMapper
+
+]]></model>
+      </base>
+    </memento>
+    <memento id="ug00001g7kl00v2rmf6vkjtgn4ua" type="VariableProcessingComponent">
+      <name><![CDATA[get_Error_mapping]]></name>
+      <extension type="attributes">
+        <inputPSPSupported><![CDATA[true]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[true]]></outputPSPSupported>
+        <locationX><![CDATA[320]]></locationX>
+        <locationY><![CDATA[368]]></locationY>
+        <index><![CDATA[19]]></index>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <outputGlobalSchemaName/>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+#Thu Jun 04 13:26:32 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables()
+FAST_CONVERTER_INFORMATION=no(value(String,getVariable(String,err_msg)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="document" version\="2.3"><output><element comment\="" expanded\="true" predicate\="" qName\="table" type\="String"><element comment\="" expanded\="true" predicate\="" qName\="row" type\="String"><element comment\="msg" expanded\="false" predicate\="" qName\="column" type\="String"><links><null/><variable id\="le00001g7kl00v2rmfhbbcb4n4u9" name\="err_msg" type\="String"/></links></element></element></element></output></mapping>
+MAPPING_DOCUMENT=
+FAST_CONVERTER_NAME=expressionInput
+TYPE=dataMapper
+]]></model>
+      </base>
+    </memento>
+    <memento id="o800001g7kl00v2rmfq1quken4u6" type="DataProcessingCallComponent">
+      <base type="attributes">
+        <moduleName><![CDATA[drsum_adapter]]></moduleName>
+        <operationName><![CDATA[put_table_data]]></operationName>
+        <operationProperties children="property" type="attributes">
+          <property key="TYPE_TABLE::row::4::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::9::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="TABLE_NAME::type"><![CDATA[simple]]></property>
+          <property key="DELETE_RECORD::value"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::3::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::10::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::7::column::TYPE_COLUMN"><![CDATA[TIMESTAMP (Date)]]></property>
+          <property key="TYPE_TABLE::row::0::column::NAME_COLUMN"><![CDATA[customerHubList]]></property>
+          <property key="DELETE_RECORD::type"><![CDATA[simple]]></property>
+          <property key="IS_REFRESH::type"><![CDATA[simple]]></property>
+          <property key="CONNECTION::type"><![CDATA[resource]]></property>
+          <property key="TARGET_COLUMN_VERIFY_PARAMETER::type"><![CDATA[simple]]></property>
+          <property key="TYPE_TABLE::row::1::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::1::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::9::column::NAME_COLUMN"><![CDATA[updatedatetime]]></property>
+          <property key="TYPE_TABLE::row::5::column::TYPE_COLUMN"><![CDATA[NUMERIC (BigDecimal)]]></property>
+          <property key="TYPE_TABLE::row::2::column::PRECISIONCOLUMN"><![CDATA[33]]></property>
+          <property key="TYPE_TABLE::row::6::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::8::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::5::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::3::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::2::column::HIDDEN_TABLE_TYPE"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::9::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::2::column::HIDDEN_TABLE_NAME"><![CDATA[T_DM_FAILURE_EQUIPMENT]]></property>
+          <property key="TYPE_TABLE::row::7::column::PRECISIONCOLUMN"><![CDATA[0]]></property>
+          <property key="TARGET_COLUMN_VERIFY_PARAMETER::value"><![CDATA[false]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::6::column::HIDDEN_TABLE_TYPE"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::7::column::NAME_COLUMN"><![CDATA[insertdatetime]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::6::column::HIDDEN_TABLE_NAME"><![CDATA[T_GM_EQUIPMENT_STS]]></property>
+          <property key="TYPE_TABLE::row::3::column::TYPE_COLUMN"><![CDATA[NUMERIC (BigDecimal)]]></property>
+          <property key="TYPE_TABLE::row::10::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::8::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::5::column::NAME_COLUMN"><![CDATA[customerHubCode]]></property>
+          <property key="TYPE_TABLE::row::7::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::4::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::2::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::9::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::1::column::TYPE_COLUMN"><![CDATA[NUMERIC (BigDecimal)]]></property>
+          <property key="TYPE_TABLE::row::3::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::type"><![CDATA[table]]></property>
+          <property key="TYPE_TABLE::row::4::column::PRECISIONCOLUMN"><![CDATA[33]]></property>
+          <property key="TYPE_TABLE::row::6::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::1::column::HIDDEN_TABLE_TYPE"><![CDATA[0]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::1::column::HIDDEN_TABLE_NAME"><![CDATA[T_DM_FAILURE]]></property>
+          <property key="TYPE_TABLE::row::3::column::NAME_COLUMN"><![CDATA[failureBaseId]]></property>
+          <property key="TYPE_TABLE::row::10::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::10::column::TYPE_COLUMN"><![CDATA[TIMESTAMP (Date)]]></property>
+          <property key="TYPE_TABLE::row::9::column::PRECISIONCOLUMN"><![CDATA[0]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::5::column::HIDDEN_TABLE_TYPE"><![CDATA[0]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::5::column::HIDDEN_TABLE_NAME"><![CDATA[T_GM_EQUIPMENT_KIND]]></property>
+          <property key="TYPE_TABLE::row::3::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::1::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::8::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::4::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="HIDDEN_TABLE_MAP::type"><![CDATA[table]]></property>
+          <property key="TYPE_TABLE::row::8::column::TYPE_COLUMN"><![CDATA[VARCHAR (String)]]></property>
+          <property key="TYPE_TABLE::row::1::column::NAME_COLUMN"><![CDATA[constructionBaseId]]></property>
+          <property key="TYPE_TABLE::row::0::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::1::column::PRECISIONCOLUMN"><![CDATA[33]]></property>
+          <property key="TYPE_TABLE::row::5::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::8::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::2::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::rows"><![CDATA[11]]></property>
+          <property key="TYPE_TABLE::row::6::column::TYPE_COLUMN"><![CDATA[VARCHAR (String)]]></property>
+          <property key="TYPE_TABLE::row::6::column::PRECISIONCOLUMN"><![CDATA[255]]></property>
+          <property key="TYPE_TABLE::row::10::column::PRECISIONCOLUMN"><![CDATA[0]]></property>
+          <property key="KEY_SUPPORTSUPDATE::type"><![CDATA[simple]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::0::column::HIDDEN_TABLE_TYPE"><![CDATA[0]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::0::column::HIDDEN_TABLE_NAME"><![CDATA[T_DM_EQUIPMENT]]></property>
+          <property key="TYPE_TABLE::row::7::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::2::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::0::column::NULLCOLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::8::column::NAME_COLUMN"><![CDATA[updateuser]]></property>
+          <property key="HIDDEN_TABLE_MAP::columns"><![CDATA[HIDDEN_TABLE_NAME::HIDDEN_TABLE_TYPE]]></property>
+          <property key="TYPE_TABLE::row::6::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::4::column::HIDDEN_TABLE_TYPE"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::4::column::TYPE_COLUMN"><![CDATA[NUMERIC (BigDecimal)]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::4::column::HIDDEN_TABLE_NAME"><![CDATA[T_FM_CUSTOMER_HUB]]></property>
+          <property key="TYPE_TABLE::row::10::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::2::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="HIDDEN_TABLE_MAP::rows"><![CDATA[7]]></property>
+          <property key="KEY_SUPPORTSUPDATE::value"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::9::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::9::column::TYPE_COLUMN"><![CDATA[TIMESTAMP (Date)]]></property>
+          <property key="TYPE_TABLE::row::7::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::3::column::PRECISIONCOLUMN"><![CDATA[33]]></property>
+          <property key="TYPE_TABLE::row::6::column::NAME_COLUMN"><![CDATA[insertuser]]></property>
+          <property key="TYPE_TABLE::row::2::column::TYPE_COLUMN"><![CDATA[NUMERIC (BigDecimal)]]></property>
+          <property key="TYPE_TABLE::row::6::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::1::column::KEY_COLUMN"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::10::column::NAME_COLUMN"><![CDATA[createdatetime]]></property>
+          <property key="TYPE_TABLE::row::8::column::PRECISIONCOLUMN"><![CDATA[255]]></property>
+          <property key="TYPE_TABLE::row::7::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="DROP_TABLE::value"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::5::column::NULLCOLUMN"><![CDATA[true]]></property>
+          <property key="IS_REFRESH::value"><![CDATA[false]]></property>
+          <property key="TYPE_TABLE::row::4::column::NAME_COLUMN"><![CDATA[customerCode]]></property>
+          <property key="TABLE_NAME::value"><![CDATA[Sample_DM_CUSTOMER_HUB_LIST]]></property>
+          <property key="TYPE_TABLE::row::0::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::0::column::TYPE_COLUMN"><![CDATA[NUMERIC (BigDecimal)]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::3::column::HIDDEN_TABLE_TYPE"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::0::column::PRECISIONCOLUMN"><![CDATA[0]]></property>
+          <property key="HIDDEN_TABLE_MAP::row::3::column::HIDDEN_TABLE_NAME"><![CDATA[T_DM_MAINTENANCE_BASE]]></property>
+          <property key="TYPE_TABLE::row::5::column::SCALECOLUMN"><![CDATA[0]]></property>
+          <property key="TYPE_TABLE::row::4::column::TARGET_COLUMN"><![CDATA[true]]></property>
+          <property key="DROP_TABLE::type"><![CDATA[simple]]></property>
+          <property key="TYPE_TABLE::row::0::column::KEY_COLUMN"><![CDATA[true]]></property>
+          <property key="TYPE_TABLE::row::2::column::NAME_COLUMN"><![CDATA[checkBaseId]]></property>
+          <property key="TYPE_TABLE::row::5::column::PRECISIONCOLUMN"><![CDATA[33]]></property>
+          <property key="TYPE_TABLE::columns"><![CDATA[TARGET_COLUMN::KEY_COLUMN::NAME_COLUMN::TYPE_COLUMN::NULLCOLUMN::PRECISIONCOLUMN::SCALECOLUMN]]></property>
+          <property key="CONNECTION::value"><![CDATA[DSM_dwh]]></property>
+        </operationProperties>
+      </base>
+      <name><![CDATA[Insert_dm_customer_hub_list]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[656]]></locationX>
+        <locationY><![CDATA[112]]></locationY>
+        <index><![CDATA[4]]></index>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="so00001g7kl00v2rmfehtlncn4u5" type="ReturnComponent">
+      <extension type="attributes">
+        <index><![CDATA[2]]></index>
+        <locationX><![CDATA[752]]></locationX>
+        <locationY><![CDATA[16]]></locationY>
+      </extension>
+      <base type="attributes"/>
+    </memento>
+    <memento id="bi00001g7kl00v2rmfc8r0f2n4u9" type="DataProcessingCallComponent">
+      <base type="attributes">
+        <moduleName><![CDATA[csv_adapter]]></moduleName>
+        <operationName><![CDATA[put_data]]></operationName>
+        <operationProperties children="property" type="attributes">
+          <property key="DELIMITER_DIRECT::value"/>
+          <property key="DELIMITER_MODE::value"><![CDATA[DELIMITER_MODE_LIST_VALUE]]></property>
+          <property key="COLUMNS::row::0::column::COLUMN_QUOTED"><![CDATA[false]]></property>
+          <property key="NOT_INSERT_FIRST_LINE_FILE_EXIST::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHARSET::type"><![CDATA[simple]]></property>
+          <property key="APPEND::type"><![CDATA[simple]]></property>
+          <property key="COLUMNS::type"><![CDATA[table]]></property>
+          <property key="SUPPORTS_TX::type"><![CDATA[simple]]></property>
+          <property key="OVER_WRITE_MODE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_DIRECT::type"><![CDATA[simple]]></property>
+          <property key="SUPPORTS_TX::value"><![CDATA[false]]></property>
+          <property key="APPEND::value"><![CDATA[false]]></property>
+          <property key="DELIMITER_MODE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHARSET::value"/>
+          <property key="COLUMNS::columns"><![CDATA[COLUMN_NAME::COLUMN_QUOTED]]></property>
+          <property key="FILE_PATH::type"><![CDATA[simple]]></property>
+          <property key="NEW_LINE::type"><![CDATA[simple]]></property>
+          <property key="DELIMITER_CHAR::type"><![CDATA[simple]]></property>
+          <property key="CHARSET::type"><![CDATA[simple]]></property>
+          <property key="OVER_WRITE_MODE::value"><![CDATA[true]]></property>
+          <property key="NEW_LINE::value"><![CDATA[AUTO]]></property>
+          <property key="DELIMITER_CHAR::value"><![CDATA[,]]></property>
+          <property key="NOT_INSERT_FIRST_LINE_FILE_EXIST::value"><![CDATA[false]]></property>
+          <property key="INSERT_FIRST_LINE::value"><![CDATA[false]]></property>
+          <property key="FILE_PATH::value"><![CDATA[/data/DrSum_Error.csv]]></property>
+          <property key="COLUMNS::row::0::column::COLUMN_NAME"><![CDATA[msg]]></property>
+          <property key="CHARSET::value"><![CDATA[Windows-31J]]></property>
+          <property key="INSERT_FIRST_LINE::type"><![CDATA[simple]]></property>
+          <property key="COLUMNS::rows"><![CDATA[1]]></property>
+        </operationProperties>
+      </base>
+      <name><![CDATA[Delete_write]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[432]]></locationX>
+        <locationY><![CDATA[208]]></locationY>
+        <index><![CDATA[11]]></index>
+        <breakPoint><![CDATA[true]]></breakPoint>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="hc00001g7kl00v2rmft86vtmn4u9" type="VariableProcessingComponent">
+      <name><![CDATA[Delete_Error_msg]]></name>
+      <extension type="attributes">
+        <locationX><![CDATA[208]]></locationX>
+        <locationY><![CDATA[208]]></locationY>
+        <index><![CDATA[15]]></index>
+      </extension>
+      <base type="attributes">
+        <model><![CDATA[#
+#Thu Jun 04 13:26:32 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputDocument0/>\r\n  <inputDocument1/>\r\n  <inputDocument2/>\r\n  <inputDocument3/>\r\n  <inputDocument4/>\r\n  <inputDocument5/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,err_msg,singleLineStringConstant(\u30C6\u30FC\u30D6\u30EB\u524A\u9664\u30A8\u30E9\u30FC\u767A\u751F\u3002)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="err_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="" id\="o400001g7kl00v2rmfra1ooan4u9" type\="String" x\="271" y\="66"><field name\="constant" value\="\u30C6\u30FC\u30D6\u30EB\u524A\u9664\u30A8\u30E9\u30FC\u767A\u751F\u3002"/></logic></links></outputVariable></outputVariables></mapping>
+MAPPING_DOCUMENT=
+TYPE=variableMapper
+]]></model>
+      </base>
+    </memento>
+  </children>
+  <children type="variables">
+    <memento id="ba00001g7kl00v2rmfl5b026n4u9" type="Variable">
+      <name><![CDATA[err_msg]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+      <description/>
+    </memento>
+  </children>
+  <children type="relations">
+    <memento id="oe00001g7kl00v2rmfsaqfngn4u9" type="CatchFlow">
+      <base type="attributes">
+        <catchIndex><![CDATA[3]]></catchIndex>
+        <targets type="list">
+          <entry><![CDATA[get_dm_customert_hub_list]]></entry>
+        </targets>
+        <fromID><![CDATA[h200001g7kl00v2rmf3mduccn4u8]]></fromID>
+        <toID><![CDATA[jk00001g7kl00v2rmfkvl03qn4ua]]></toID>
+      </base>
+      <extension type="attributes">
+        <catchLocationX><![CDATA[112]]></catchLocationX>
+        <catchLocationY><![CDATA[368]]></catchLocationY>
+      </extension>
+      <description><![CDATA[get_Error]]></description>
+    </memento>
+    <memento id="dg00001g7kl00v2rmfkn60den4u6" type="DataFlow">
+      <base type="attributes">
+        <fromName><![CDATA[main_data]]></fromName>
+        <toName><![CDATA[main_data]]></toName>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <fromID><![CDATA[s000001g7kl00v2rmfplufb6n4u5]]></fromID>
+        <toID><![CDATA[l800001g7kl00v2rmfgn1uv8n4u6]]></toID>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+    </memento>
+    <memento id="j600001g7kl00v2rmf4t98k8n4ua" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[ji00001g7kl00v2rmfqsuo0mn4ua]]></fromID>
+        <toID><![CDATA[hg00001g7kl00v2rmfssuj1on4ua]]></toID>
+      </base>
+    </memento>
+    <memento id="uk00001g7kl00v2rmfevlfnin4ua" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[t200001g7kl00v2rmfkvl7msn4ua]]></fromID>
+        <toID><![CDATA[hm00001g7kl00v2rmfavkppin4ua]]></toID>
+      </base>
+    </memento>
+    <memento id="es00001g7kl00v2rmfj05m5an4ua" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[hm00001g7kl00v2rmfavkppin4ua]]></fromID>
+        <toID><![CDATA[oq00001g7kl00v2rmf2fh9bkn4u9]]></toID>
+      </base>
+    </memento>
+    <memento id="ga00001g7kl00v2rmfdn5mjsn4u8" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[l000001g7kl00v2rmfehtkoon4u5]]></fromID>
+        <toID><![CDATA[h200001g7kl00v2rmf3mduccn4u8]]></toID>
+      </base>
+    </memento>
+    <memento id="ea00001g7kl00v2rmfd92oj8n4u9" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[hc00001g7kl00v2rmft86vtmn4u9]]></fromID>
+        <toID><![CDATA[u200001g7kl00v2rmf18ojc8n4u9]]></toID>
+      </base>
+    </memento>
+    <memento id="ro00001g7kl00v2rmfon602mn4u6" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[s000001g7kl00v2rmfplufb6n4u5]]></fromID>
+        <toID><![CDATA[l800001g7kl00v2rmfgn1uv8n4u6]]></toID>
+      </base>
+    </memento>
+    <memento id="ac00001g7kl00v2rmfkvtv38n4ua" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[jk00001g7kl00v2rmfkvl03qn4ua]]></fromID>
+        <toID><![CDATA[ug00001g7kl00v2rmf6vkjtgn4ua]]></toID>
+      </base>
+    </memento>
+    <memento id="rk00001g7kl00v2rmfd008a2n4ua" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[ug00001g7kl00v2rmf6vkjtgn4ua]]></fromID>
+        <toID><![CDATA[bq00001g7kl00v2rmfabt0ikn4u9]]></toID>
+      </base>
+    </memento>
+    <memento id="re00001g7kl00v2rmf1g40v6n4u8" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[d600001g7kl00v2rmfq6tt08n4u6]]></fromID>
+        <toID><![CDATA[s000001g7kl00v2rmfplufb6n4u5]]></toID>
+      </base>
+    </memento>
+    <memento id="m000001g7kl00v2rmfpicfign4u8" type="DataFlow">
+      <base type="attributes">
+        <fromName><![CDATA[main_data]]></fromName>
+        <toName><![CDATA[main_data]]></toName>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <fromID><![CDATA[l800001g7kl00v2rmfgn1uv8n4u6]]></fromID>
+        <toID><![CDATA[o800001g7kl00v2rmfq1quken4u6]]></toID>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+    </memento>
+    <memento id="da00001g7kl00v2rmf6tbv4on4ua" type="DataFlow">
+      <base type="attributes">
+        <fromName><![CDATA[main_data]]></fromName>
+        <toName><![CDATA[main_data]]></toName>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <fromID><![CDATA[hg00001g7kl00v2rmfssuj1on4ua]]></fromID>
+        <toID><![CDATA[lq00001g7kl00v2rmfoa43cin4u9]]></toID>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+    </memento>
+    <memento id="kk00001g7kl00v2rmfotbv2an4ua" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[hg00001g7kl00v2rmfssuj1on4ua]]></fromID>
+        <toID><![CDATA[lq00001g7kl00v2rmfoa43cin4u9]]></toID>
+      </base>
+    </memento>
+    <memento id="fk00001g7kl00v2rmf434v86n4u9" type="CatchFlow">
+      <base type="attributes">
+        <catchIndex><![CDATA[2]]></catchIndex>
+        <targets type="list">
+          <entry><![CDATA[Create_Table]]></entry>
+        </targets>
+        <fromID><![CDATA[h200001g7kl00v2rmf3mduccn4u8]]></fromID>
+        <toID><![CDATA[ji00001g7kl00v2rmfqsuo0mn4ua]]></toID>
+      </base>
+      <extension type="attributes">
+        <catchLocationX><![CDATA[112]]></catchLocationX>
+        <catchLocationY><![CDATA[288]]></catchLocationY>
+      </extension>
+      <description><![CDATA[Create_Error]]></description>
+    </memento>
+    <memento id="dk00001g7kl00v2rmf7008cen4ua" type="DataFlow">
+      <base type="attributes">
+        <fromName><![CDATA[main_data]]></fromName>
+        <toName><![CDATA[main_data]]></toName>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <fromID><![CDATA[ug00001g7kl00v2rmf6vkjtgn4ua]]></fromID>
+        <toID><![CDATA[bq00001g7kl00v2rmfabt0ikn4u9]]></toID>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+    </memento>
+    <memento id="l400001g7kl00v2rmff95gfsn4u9" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[u200001g7kl00v2rmf18ojc8n4u9]]></fromID>
+        <toID><![CDATA[bi00001g7kl00v2rmfc8r0f2n4u9]]></toID>
+      </base>
+    </memento>
+    <memento id="ta00001g7kl00v2rmfniese4n4u8" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[l800001g7kl00v2rmfgn1uv8n4u6]]></fromID>
+        <toID><![CDATA[o800001g7kl00v2rmfq1quken4u6]]></toID>
+      </base>
+    </memento>
+    <memento id="j600001g7kl00v2rmft05m7kn4ua" type="DataFlow">
+      <base type="attributes">
+        <fromName><![CDATA[main_data]]></fromName>
+        <toName><![CDATA[main_data]]></toName>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <fromID><![CDATA[hm00001g7kl00v2rmfavkppin4ua]]></fromID>
+        <toID><![CDATA[oq00001g7kl00v2rmf2fh9bkn4u9]]></toID>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+    </memento>
+    <memento id="j800001g7kl00v2rmffmdv3qn4u8" type="CatchFlow">
+      <base type="attributes">
+        <catchIndex><![CDATA[1]]></catchIndex>
+        <targets type="list">
+          <entry><![CDATA[Delete_Table]]></entry>
+        </targets>
+        <fromID><![CDATA[h200001g7kl00v2rmf3mduccn4u8]]></fromID>
+        <toID><![CDATA[hc00001g7kl00v2rmft86vtmn4u9]]></toID>
+      </base>
+      <extension type="attributes">
+        <catchLocationX><![CDATA[112]]></catchLocationX>
+        <catchLocationY><![CDATA[208]]></catchLocationY>
+      </extension>
+      <description><![CDATA[Delete_Error]]></description>
+    </memento>
+    <memento id="t600001g7kl00v2rmfeeuu06n4u9" type="CatchFlow">
+      <base type="attributes">
+        <catchIndex><![CDATA[4]]></catchIndex>
+        <targets type="list">
+          <entry><![CDATA[Insert_dm_customer_hub_list]]></entry>
+        </targets>
+        <fromID><![CDATA[h200001g7kl00v2rmf3mduccn4u8]]></fromID>
+        <toID><![CDATA[t200001g7kl00v2rmfkvl7msn4ua]]></toID>
+      </base>
+      <extension type="attributes">
+        <catchLocationX><![CDATA[112]]></catchLocationX>
+        <catchLocationY><![CDATA[448]]></catchLocationY>
+      </extension>
+      <description><![CDATA[Insert_Error]]></description>
+    </memento>
+    <memento id="di00001g7kl00v2rmfjmdv0en4u8" type="TryFlow">
+      <extension type="attributes">
+        <tryLocationX><![CDATA[224]]></tryLocationX>
+        <tryLocationY><![CDATA[16]]></tryLocationY>
+      </extension>
+      <base type="attributes">
+        <fromID><![CDATA[h200001g7kl00v2rmf3mduccn4u8]]></fromID>
+        <toID><![CDATA[fm00001g7kl00v2rmfjbojk6n4u6]]></toID>
+      </base>
+    </memento>
+    <memento id="r600001g7kl00v2rmfr95ghin4u9" type="DataFlow">
+      <base type="attributes">
+        <fromName><![CDATA[main_data]]></fromName>
+        <toName><![CDATA[main_data]]></toName>
+        <inPSPBlock><![CDATA[true]]></inPSPBlock>
+        <fromID><![CDATA[u200001g7kl00v2rmf18ojc8n4u9]]></fromID>
+        <toID><![CDATA[bi00001g7kl00v2rmfc8r0f2n4u9]]></toID>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+    </memento>
+    <memento id="a800001g7kl00v2rmff3rpakn4u9" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[h200001g7kl00v2rmf3mduccn4u8]]></fromID>
+        <toID><![CDATA[so00001g7kl00v2rmfehtlncn4u5]]></toID>
+      </base>
+    </memento>
+    <memento id="lc00001g7kl00v2rmf005dsen4u7" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[fm00001g7kl00v2rmfjbojk6n4u6]]></fromID>
+        <toID><![CDATA[d600001g7kl00v2rmfq6tt08n4u6]]></toID>
+      </base>
+    </memento>
+  </children>
+</script>

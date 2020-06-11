@@ -1,0 +1,1914 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<script>
+  <memento>
+    <option type="attributes">
+      <DATA_PROCESSING_CONNECTION_OPTION_XMLFW_CONF><![CDATA[false]]></DATA_PROCESSING_CONNECTION_OPTION_XMLFW_CONF>
+    </option>
+    <extension type="attributes">
+      <created><![CDATA[1591073864146]]></created>
+      <lastUpdated><![CDATA[1591073864364]]></lastUpdated>
+      <testArgumentValues children="property" type="attributes">
+        <property key="int_request_sts"/>
+        <property key="int_request_type"/>
+        <property key="int_priority_request"/>
+        <property key="int_maker_id_request"/>
+        <property key="str_valid_request"/>
+      </testArgumentValues>
+      <migrationFrows type="attributes"/>
+      <testArgumentValuesEnabled><![CDATA[false]]></testArgumentValuesEnabled>
+      <gridSize><![CDATA[16]]></gridSize>
+      <migrationFlows type="attributes"/>
+    </extension>
+  </memento>
+  <children type="components">
+    <memento id="es00001g7kl00v2rmfq8ucaen4sr" type="VariableProcessingComponent">
+      <name><![CDATA[error_msg設定]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(${str_error_msg}\u306E\u5165\u529B\u5185\u5BB9\u306B\u8AA4\u308A\u304C\u3042\u308A\u307E\u3059\u3002)),setVariable(String,str_data_check,singleLineStringConstant(false)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,str_data_check,singleLineStringConstant(false)),setVariable(String,error_msg,singleLineStringConstant(${error_msg}\u306E\u5165\u529B\u5185\u5BB9\u306B\u8AA4\u308A\u304C\u3042\u308A\u307E\u3059\u3002)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="" id\="vq0000bg0ll00torgsqemi8sn306" type\="String" x\="254" y\="159"><field name\="constant" value\="${str_error_msg}\u306E\u5165\u529B\u5185\u5BB9\u306B\u8AA4\u308A\u304C\u3042\u308A\u307E\u3059\u3002"/></logic></links></outputVariable><outputVariable name\="str_data_check" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="" id\="vm0000bg0ll00torgsqfq4tkn306" type\="String" x\="255" y\="87"><field name\="constant" value\="false"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[384]]></locationX>
+        <locationY><![CDATA[1440]]></locationY>
+        <index><![CDATA[51]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="bq00001g7kl00v2rmfe8ud3qn4sr" type="BranchComponent">
+      <name><![CDATA[construction_base_id判定(1)]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[288]]></locationX>
+        <locationY><![CDATA[160]]></locationY>
+        <index><![CDATA[25]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[288]]></endPointX>
+        <endPointY><![CDATA[240]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[cq00001g7kl00v2rmfs8ucf2n4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="b400001g7kl00v2rmf08ucbsn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[data_check]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_check_customer_hub_List,and(littleEqual(getVariable(int,int_customer_hub_List_I),numberConstant(9999999999),CONVERT),greaterEqual(getVariable(int,int_customer_hub_List_I),numberConstant(1),CONVERT),CONVERT)),setVariable(String,str_check_construction_base_id,and(littleEqual(getVariable(int,int_construction_base_id_I),numberConstant(9999999999),CONVERT),greaterEqual(getVariable(int,int_construction_base_id_I),numberConstant(1),CONVERT),CONVERT)),setVariable(String,str_check_check_base_id,and(littleEqual(getVariable(int,int_check_base_id_I),numberConstant(9999999999),CONVERT),greaterEqual(getVariable(int,int_check_base_id_I),numberConstant(1),EXCLUDE),CONVERT)),setVariable(String,str_check_failure_base_id,and(greaterEqual(getVariable(int,int_failure_base_id_I),numberConstant(1),CONVERT),littleEqual(getVariable(int,int_failure_base_id_I),numberConstant(9999999999),CONVERT),CONVERT)),setVariable(String,str_check_customer_code,and(greaterEqual(getVariable(int,int_customer_code_I),numberConstant(1),CONVERT),littleEqual(getVariable(int,int_customer_code_I),numberConstant(9999999999),CONVERT),CONVERT)),setVariable(String,str_check_customer_hub_code,and(greaterEqual(getVariable(int,int_customer_hub_code_I),numberConstant(1),CONVERT),littleEqual(getVariable(int,int_customer_hub_code_I),numberConstant(9999999999),CONVERT),CONVERT)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,check_request_type,and(littleEqual(getVariable(int,int_request_type),numberConstant(3),CONVERT),greaterEqual(getVariable(int,int_request_type),numberConstant(1),CONVERT),CONVERT)),setVariable(String,check_maker_id_request,or(numberEqual(getVariable(int,int_maker_id_request),numberConstant(0),CONVERT),greaterEqual(getVariable(int,int_maker_id_request),numberConstant(1),CONVERT),CONVERT)),setVariable(String,check_priority_request,and(greaterEqual(getVariable(int,int_priority_request),numberConstant(-999999999999999),CONVERT),littleEqual(getVariable(int,int_priority_request),numberConstant(999999999999999),CONVERT),CONVERT)),setVariable(String,check_valid_request,or(stringEqual(getVariable(String,str_valid_request),singleLineStringConstant(),CONVERT),exists(getVariable(String,str_valid_request),yyyy-MM-dd,EXCLUDE),CONVERT)),setVariable(String,check_request_sts,and(littleEqual(getVariable(int,int_request_sts),numberConstant(3),CONVERT),greaterEqual(getVariable(int,int_request_sts),numberConstant(1),CONVERT),CONVERT)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_check_customer_hub_List" type\="String"><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$AndIcon" comment\="" id\="h00000bg0ll00torgsiuos7kn302" type\="String" x\="219" y\="42"><field name\="nullOption" value\="CONVERT"/><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$LittleEqualIcon" comment\="" id\="ng0000bg0ll00torgsisl0bmn302" type\="String" x\="77" y\="7"><field name\="nullOption" value\="CONVERT"/><links><variable id\="n20000bg0ll00torgsqe20gon302" name\="int_customer_hub_List_I" type\="int"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="9999999999\u4EE5\u4E0B" id\="cg0000bg0ll00torgsetdiv6n302" type\="String" x\="146" y\="2"><field name\="constant" value\="9999999999"/></logic></links></logic><logic class\="com.appresso.ds.mapper.model.CalculationIcon$GreaterEqualIcon" comment\="" id\="la0000bg0ll00torgscqe0egn302" type\="String" x\="88" y\="60"><field name\="nullOption" value\="CONVERT"/><links><ref id\="n20000bg0ll00torgsqe20gon302"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="1\u4EE5\u4E0A" id\="bc0000bg0ll00torgs8rodaan302" type\="String" x\="149" y\="74"><field name\="constant" value\="1"/></logic></links></logic></links></logic></links></outputVariable><outputVariable name\="str_check_construction_base_id" type\="String"><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$AndIcon" comment\="" id\="i20000bg0ll00torgsdhp9r0n30f" type\="String" x\="210" y\="184"><field name\="nullOption" value\="CONVERT"/><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$LittleEqualIcon" comment\="" id\="qm0000bg0ll00torgsjhp9pgn30f" type\="String" x\="82" y\="138"><field name\="nullOption" value\="CONVERT"/><links><variable id\="qa0000bg0ll00torgsge20h6n302" name\="int_construction_base_id_I" type\="int"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="9999999999\u4EE5\u4E0B" id\="hi0000bg0ll00torgsfhp9ogn30f" type\="String" x\="159" y\="135"><field name\="constant" value\="9999999999"/></logic></links></logic><logic class\="com.appresso.ds.mapper.model.CalculationIcon$GreaterEqualIcon" comment\="" id\="fc0000bg0ll00torgs9hp9nmn30f" type\="String" x\="90" y\="196"><field name\="nullOption" value\="CONVERT"/><links><ref id\="qa0000bg0ll00torgsge20h6n302"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="1\u4EE5\u4E0A" id\="vm0000bg0ll00torgsthp9qan30f" type\="String" x\="157" y\="219"><field name\="constant" value\="1"/></logic></links></logic></links></logic></links></outputVariable><outputVariable name\="str_check_check_base_id" type\="String"><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$AndIcon" comment\="" id\="ke0000fg12l00ucrl14mt7n8n385" type\="String" x\="194" y\="304"><field name\="nullOption" value\="CONVERT"/><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$LittleEqualIcon" comment\="" id\="ai0000fg12l00ucrl1iiogkkn385" type\="String" x\="89" y\="271"><field name\="nullOption" value\="CONVERT"/><links><variable id\="tc0000bg0ll00torgsge20i6n302" name\="int_check_base_id_I" type\="int"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="9999999999\u4EE5\u4E0B" id\="cs0000fg12l00ucrl16ioglin385" type\="String" x\="150" y\="263"><field name\="constant" value\="9999999999"/></logic></links></logic><logic class\="com.appresso.ds.mapper.model.CalculationIcon$GreaterEqualIcon" comment\="" id\="a600001g28l00v2rms2j31aqn31p" type\="String" x\="91" y\="324"><field name\="nullOption" value\="EXCLUDE"/><links><ref id\="tc0000bg0ll00torgsge20i6n302"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="1\u4EE5\u4E0A" id\="vc00001g28l00v2rmsqb84vsn31p" type\="String" x\="161" y\="353"><field name\="constant" value\="1"/></logic></links></logic></links></logic></links></outputVariable><outputVariable name\="str_check_failure_base_id" type\="String"><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$AndIcon" comment\="" id\="ng0000bg0ll00torgstjnk3sn302" type\="String" x\="220" y\="459"><field name\="nullOption" value\="CONVERT"/><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$GreaterEqualIcon" comment\="" id\="vc0000bg0ll00torgs9kg9k6n302" type\="String" x\="87" y\="466"><field name\="nullOption" value\="CONVERT"/><links><variable id\="ci0000tg3jl00sariq14o510n2v5" name\="int_failure_base_id_I" type\="int"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="1\u4EE5\u4E0A" id\="om0000bg0ll00torgspli08in302" type\="String" x\="164" y\="496"><field name\="constant" value\="1"/></logic></links></logic><logic class\="com.appresso.ds.mapper.model.CalculationIcon$LittleEqualIcon" comment\="" id\="n20000bg0ll00torgs5kom7qn302" type\="String" x\="84" y\="411"><field name\="nullOption" value\="CONVERT"/><links><ref id\="ci0000tg3jl00sariq14o510n2v5"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="9999999999\u4EE5\u4E0B" id\="fg0000bg0ll00torgspll690n302" type\="String" x\="159" y\="415"><field name\="constant" value\="9999999999"/></logic></links></logic></links></logic></links></outputVariable><outputVariable name\="str_check_customer_code" type\="String"><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$AndIcon" comment\="" id\="fe0000fg12l00ucrl1mqoi2sn385" type\="String" x\="210" y\="588"><field name\="nullOption" value\="CONVERT"/><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$GreaterEqualIcon" comment\="" id\="eq0000fg12l00ucrl12qoi0an385" type\="String" x\="84" y\="598"><field name\="nullOption" value\="CONVERT"/><links><variable id\="qi0000fg12l00ucrl1tsqr1kn37t" name\="int_customer_code_I" type\="int"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="1\u4EE5\u4E0A" id\="os0000fg12l00ucrl1sqoi1in385" type\="String" x\="162" y\="616"><field name\="constant" value\="1"/></logic></links></logic><logic class\="com.appresso.ds.mapper.model.CalculationIcon$LittleEqualIcon" comment\="" id\="ok0000fg12l00ucrl1sqoi3on385" type\="String" x\="83" y\="539"><field name\="nullOption" value\="CONVERT"/><links><ref id\="qi0000fg12l00ucrl1tsqr1kn37t"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="9999999999\u4EE5\u4E0B" id\="ci0000fg12l00ucrl1aqoi44n385" type\="String" x\="165" y\="547"><field name\="constant" value\="9999999999"/></logic></links></logic></links></logic></links></outputVariable><outputVariable name\="str_check_customer_hub_code" type\="String"><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$AndIcon" comment\="" id\="fk0000fg12l00ucrl1crvrsgn385" type\="String" x\="234" y\="733"><field name\="nullOption" value\="CONVERT"/><links><logic class\="com.appresso.ds.mapper.model.CalculationIcon$GreaterEqualIcon" comment\="" id\="ho0000fg12l00ucrl1grvrqcn385" type\="String" x\="89" y\="739"><field name\="nullOption" value\="CONVERT"/><links><variable id\="bg0000fg12l00ucrl1lsqr2en37t" name\="int_customer_hub_code_I" type\="int"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="1\u4EE5\u4E0A" id\="h80000fg12l00ucrl1orvrren385" type\="String" x\="173" y\="760"><field name\="constant" value\="1"/></logic></links></logic><logic class\="com.appresso.ds.mapper.model.CalculationIcon$LittleEqualIcon" comment\="" id\="pc0000fg12l00ucrl16rvrtcn385" type\="String" x\="79" y\="686"><field name\="nullOption" value\="CONVERT"/><links><ref id\="bg0000fg12l00ucrl1lsqr2en37t"/><logic class\="com.appresso.ds.mapper.model.ConstantIcon$NumberConstantIcon" comment\="9999999999\u4EE5\u4E0B" id\="h40000fg12l00ucrl1arvru2n385" type\="String" x\="169" y\="689"><field name\="constant" value\="9999999999"/></logic></links></logic></links></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[148]]></locationX>
+        <locationY><![CDATA[15]]></locationY>
+        <index><![CDATA[45]]></index>
+        <breakPoint><![CDATA[true]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="l200001g7kl00v2rmfa8uc86n4sr" type="VariableProcessingComponent">
+      <name><![CDATA[const_base_msg_1]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(${str_error_msg}\\,constructionBaseId)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(${error_msg}\\,requestSts)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="constructionBaseId" id\="fa0000bg0ll00torgse0jblon30g" type\="String" x\="304" y\="148"><field name\="constant" value\="${str_error_msg},constructionBaseId"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[400]]></locationY>
+        <index><![CDATA[52]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="l200001g7kl00v2rmfo8ucein4sr" type="BranchComponent">
+      <name><![CDATA[error_msg_check_3]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[512]]></locationX>
+        <locationY><![CDATA[656]]></locationY>
+        <index><![CDATA[5]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[784]]></endPointX>
+        <endPointY><![CDATA[736]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[kq00001g7kl00v2rmfi8uckkn4sr]]></entry>
+          <entry><![CDATA[a400001g7kl00v2rmfo8ucc2n4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="so00001g7kl00v2rmfk8uc9cn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[customer_hub_code_msg_1]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(${str_error_msg}\\,customerHubCode)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(${error_msg}\\,priorityRequest)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="customerHubCode" id\="t00000bg0ll00torgsdejd42n305" type\="String" x\="248" y\="135"><field name\="constant" value\="${str_error_msg},customerHubCode"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[720]]></locationX>
+        <locationY><![CDATA[1152]]></locationY>
+        <index><![CDATA[55]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="b000001g7kl00v2rmfa8ud4sn4sr" type="ScriptOriginComponent">
+      <name/>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[16]]></locationX>
+        <locationY><![CDATA[16]]></locationY>
+        <index><![CDATA[43]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="vo00001g7kl00v2rmfa8ucdqn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[failure_base_id_msg_1]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(${str_error_msg}\\,failureBaseId)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(${error_msg}\\,validRequest)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="failureBaseId" id\="ki0000bg0ll00torgshs5e9en305" type\="String" x\="274" y\="139"><field name\="constant" value\="${str_error_msg},failureBaseId"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[800]]></locationY>
+        <index><![CDATA[49]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="gm00001g7kl00v2rmf08ucrqn4sr" type="BranchComponent">
+      <name><![CDATA[if]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[288]]></locationX>
+        <locationY><![CDATA[1360]]></locationY>
+        <index><![CDATA[15]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[288]]></endPointX>
+        <endPointY><![CDATA[1440]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[es00001g7kl00v2rmfq8ucaen4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="t000001g7kl00v2rmfi8ucl0n4sr" type="BranchComponent">
+      <name><![CDATA[check_base_id判定]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[288]]></locationX>
+        <locationY><![CDATA[656]]></locationY>
+        <index><![CDATA[3]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[288]]></endPointX>
+        <endPointY><![CDATA[736]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[l200001g7kl00v2rmfo8ucein4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="de00001g7kl00v2rmf48ucggn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[const_base_msg_2]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(constructionBaseId)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(requestSts)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="constructionBaseId" id\="tc0000bg0ll00torgsm2ll0sn30i" type\="String" x\="258" y\="106"><field name\="constant" value\="constructionBaseId"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[480]]></locationY>
+        <index><![CDATA[53]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="qq00001g7kl00v2rmf68ucvmn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[customer_hub_list_2]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(customerHubList)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(requestSts)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="customerHubList" id\="tc0000bg0ll00torgsm2ll0sn30i" type\="String" x\="258" y\="106"><field name\="constant" value\="customerHubList"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[192]]></locationY>
+        <index><![CDATA[57]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="fc00001g7kl00v2rmfg8ud1mn4sr" type="BranchComponent">
+      <name><![CDATA[customer_hub_code判定]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[288]]></locationX>
+        <locationY><![CDATA[1200]]></locationY>
+        <index><![CDATA[21]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[288]]></endPointX>
+        <endPointY><![CDATA[1296]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[ic00001g7kl00v2rmfg8ucp2n4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="kq00001g7kl00v2rmfi8uckkn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[check_base_id_msg_1]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(${str_error_msg}\\,checkBaseId)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(${error_msg}\\,makerIdRequest)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="checkBaseId" id\="oe0000bg0ll00torgsel0ojen30i" type\="String" x\="257" y\="138"><field name\="constant" value\="${str_error_msg},checkBaseId"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[624]]></locationY>
+        <index><![CDATA[54]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="ic00001g7kl00v2rmfg8ucp2n4sr" type="BranchComponent">
+      <name><![CDATA[error_msg_check_6]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[528]]></locationX>
+        <locationY><![CDATA[1200]]></locationY>
+        <index><![CDATA[23]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[768]]></endPointX>
+        <endPointY><![CDATA[1296]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[cm00001g7kl00v2rmf88ucjmn4sr]]></entry>
+          <entry><![CDATA[so00001g7kl00v2rmfk8uc9cn4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="d200001g7kl00v2rmfg8uc7kn4sr" type="BranchComponent">
+      <name><![CDATA[error_msg_check_4]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[512]]></locationX>
+        <locationY><![CDATA[848]]></locationY>
+        <index><![CDATA[13]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[784]]></endPointX>
+        <endPointY><![CDATA[928]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[hk00001g7kl00v2rmfq8ucm8n4sr]]></entry>
+          <entry><![CDATA[vo00001g7kl00v2rmfa8ucdqn4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="je00001g7kl00v2rmfo8uc6cn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[check_customer_hub_list_1]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(${str_error_msg}\\,customerHubList)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(${error_msg}\\,requestSts)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="customerHubList" id\="fa0000bg0ll00torgse0jblon30g" type\="String" x\="304" y\="148"><field name\="constant" value\="${str_error_msg},customerHubList"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[112]]></locationY>
+        <index><![CDATA[58]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="di00001g7kl00v2rmfm8uco8n4sr" type="BranchComponent">
+      <name><![CDATA[error_msg_check_2]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[512]]></locationX>
+        <locationY><![CDATA[448]]></locationY>
+        <index><![CDATA[19]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[784]]></endPointX>
+        <endPointY><![CDATA[528]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[de00001g7kl00v2rmf48ucggn4sr]]></entry>
+          <entry><![CDATA[l200001g7kl00v2rmfa8uc86n4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="li00001g7kl00v2rmfs8uctan4sr" type="BranchComponent">
+      <name><![CDATA[construction_base_id判定]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[288]]></locationX>
+        <locationY><![CDATA[448]]></locationY>
+        <index><![CDATA[17]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[288]]></endPointX>
+        <endPointY><![CDATA[528]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[di00001g7kl00v2rmfm8uco8n4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="cq00001g7kl00v2rmfs8ucf2n4sr" type="BranchComponent">
+      <name><![CDATA[error_msg_check_1]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[512]]></locationX>
+        <locationY><![CDATA[160]]></locationY>
+        <index><![CDATA[27]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[784]]></endPointX>
+        <endPointY><![CDATA[240]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[je00001g7kl00v2rmfo8uc6cn4sr]]></entry>
+          <entry><![CDATA[qq00001g7kl00v2rmf68ucvmn4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="hk00001g7kl00v2rmfq8ucm8n4sr" type="VariableProcessingComponent">
+      <name><![CDATA[failure_base_id_msg_2]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(failureBaseId)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(validRequest)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="failureBaseId" id\="e00000bg0ll00torgs1tlip0n305" type\="String" x\="289" y\="145"><field name\="constant" value\="failureBaseId"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[880]]></locationY>
+        <index><![CDATA[50]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="hi00001g7kl00v2rmf28ud0sn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[customer_code_msg_1]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(${str_error_msg}\\,customerCode)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(${error_msg}\\,priorityRequest)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="customerCode" id\="t00000bg0ll00torgsdejd42n305" type\="String" x\="248" y\="135"><field name\="constant" value\="${str_error_msg},customerCode"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[976]]></locationY>
+        <index><![CDATA[47]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="qa00001g7kl00v2rmfs8ud2mn4sr" type="ReturnComponent">
+      <name/>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[112]]></locationX>
+        <locationY><![CDATA[1440]]></locationY>
+        <index><![CDATA[44]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="q400001g7kl00v2rmfg8uchqn4sr" type="BranchComponent">
+      <name><![CDATA[customer_code判定]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[288]]></locationX>
+        <locationY><![CDATA[1008]]></locationY>
+        <index><![CDATA[7]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[288]]></endPointX>
+        <endPointY><![CDATA[1088]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[is00001g7kl00v2rmfe8ucuan4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="a400001g7kl00v2rmfo8ucc2n4sr" type="VariableProcessingComponent">
+      <name><![CDATA[check_base_id_msg_2]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(checkBaseId)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(makerIdRequest)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="checkBaseId" id\="d00000bg0ll00torgs4rkf7kn305" type\="String" x\="291" y\="125"><field name\="constant" value\="checkBaseId"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[688]]></locationY>
+        <index><![CDATA[46]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="ca00001g7kl00v2rmfo8ucqgn4sr" type="BranchComponent">
+      <name><![CDATA[failure_base_id判定]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[288]]></locationX>
+        <locationY><![CDATA[848]]></locationY>
+        <index><![CDATA[11]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[288]]></endPointX>
+        <endPointY><![CDATA[928]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[d200001g7kl00v2rmfg8uc7kn4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="is00001g7kl00v2rmfe8ucuan4sr" type="BranchComponent">
+      <name><![CDATA[error_msg_check_5]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[512]]></locationX>
+        <locationY><![CDATA[1008]]></locationY>
+        <index><![CDATA[9]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[784]]></endPointX>
+        <endPointY><![CDATA[1088]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[do00001g7kl00v2rmf88ucimn4sr]]></entry>
+          <entry><![CDATA[hi00001g7kl00v2rmf28ud0sn4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="cm00001g7kl00v2rmf88ucjmn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[customer_hub_code_msg_2]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(customerHubCode)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(priorityRequest)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="customerHubCode" id\="em0000bg0ll00torgshfddk4n305" type\="String" x\="250" y\="134"><field name\="constant" value\="customerHubCode"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[720]]></locationX>
+        <locationY><![CDATA[1232]]></locationY>
+        <index><![CDATA[56]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="oa00001g7kl00v2rmf28ucnqn4sr" type="BranchComponent">
+      <name><![CDATA[status判定]]></name>
+      <description/>
+      <base type="attributes"/>
+      <extension type="attributes">
+        <locationX><![CDATA[290]]></locationX>
+        <locationY><![CDATA[16]]></locationY>
+        <index><![CDATA[1]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <endPointX><![CDATA[288]]></endPointX>
+        <endPointY><![CDATA[80]]></endPointY>
+        <expanded><![CDATA[true]]></expanded>
+        <endLineSourceComps type="list">
+          <entry><![CDATA[d800001g7kl00v2rmf08ucs4n4sr]]></entry>
+        </endLineSourceComps>
+      </extension>
+    </memento>
+    <memento id="d800001g7kl00v2rmf08ucs4n4sr" type="VariableProcessingComponent">
+      <name><![CDATA[check_status]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(status)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(${error_msg}\\,requestSts)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="status" id\="fa0000bg0ll00torgse0jblon30g" type\="String" x\="304" y\="148"><field name\="constant" value\="status"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[608]]></locationX>
+        <locationY><![CDATA[16]]></locationY>
+        <index><![CDATA[59]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="do00001g7kl00v2rmf88ucimn4sr" type="VariableProcessingComponent">
+      <name><![CDATA[customer_code_msg_2]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:16:29 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables(setVariable(String,str_error_msg,singleLineStringConstant(customerCode)))
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,error_msg,singleLineStringConstant(priorityRequest)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><outputVariables><outputVariable name\="str_error_msg" type\="String"><links><logic class\="com.appresso.ds.mapper.model.ConstantIcon$SingleLineStringConstantIcon" comment\="customerCode" id\="em0000bg0ll00torgshfddk4n305" type\="String" x\="250" y\="134"><field name\="constant" value\="customerCode"/></logic></links></outputVariable></outputVariables></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[704]]></locationX>
+        <locationY><![CDATA[1040]]></locationY>
+        <index><![CDATA[48]]></index>
+        <breakPoint><![CDATA[false]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+  </children>
+  <children type="variables">
+    <memento id="t000001g7kl00v2rmfa8ud8kn4sr" type="Variable">
+      <name><![CDATA[int_customer_hub_List_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[true]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[int]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="oc00001g7kl00v2rmfk8udfin4sr" type="Variable">
+      <name><![CDATA[str_error_msg]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[true]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[7]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="pc00001g7kl00v2rmf48udg2n4sr" type="Variable">
+      <name><![CDATA[int_failure_base_id_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[true]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[int]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[3]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="mc00001g7kl00v2rmf28udcan4sr" type="Variable">
+      <name><![CDATA[str_check_customer_code]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[13]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="jq00001g7kl00v2rmf88ud6an4sr" type="Variable">
+      <name><![CDATA[str_check_customer_hub_List]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[9]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="i600001g7kl00v2rmf68udhkn4sr" type="Variable">
+      <name><![CDATA[str_check_construction_base_id]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[10]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="om00001g7kl00v2rmf28udiin4sr" type="Variable">
+      <name><![CDATA[int_check_base_id_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[true]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[int]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[2]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="bi00001g7kl00v2rmfk8udaqn4sr" type="Variable">
+      <name><![CDATA[str_check_customer_hub_code]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[14]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="dm00001g7kl00v2rmf68ud74n4sr" type="Variable">
+      <name><![CDATA[str_data_check]]></name>
+      <base type="attributes">
+        <initialValue><![CDATA[true]]></initialValue>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[true]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[8]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="h200001g7kl00v2rmfk8udbkn4sr" type="Variable">
+      <name><![CDATA[int_construction_base_id_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[true]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[int]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[1]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="po00001g7kl00v2rmfe8udj4n4sr" type="Variable">
+      <name><![CDATA[int_customer_hub_code_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[true]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <valueType><![CDATA[int]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[5]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="hq00001g7kl00v2rmfm8ud9in4sr" type="Variable">
+      <name><![CDATA[str_status_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[true]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[6]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="eg00001g7kl00v2rmfe8ude6n4sr" type="Variable">
+      <name><![CDATA[str_check_failure_base_id]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[12]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="je00001g7kl00v2rmf88uddkn4sr" type="Variable">
+      <name><![CDATA[int_customer_code_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[true]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <valueType><![CDATA[int]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[4]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="ak00001g7kl00v2rmf48ud5cn4sr" type="Variable">
+      <name><![CDATA[str_check_check_base_id]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <inputParamRequired><![CDATA[false]]></inputParamRequired>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[11]]></index>
+      </extension>
+      <description/>
+    </memento>
+  </children>
+  <children type="relations">
+    <memento id="ae00001g7kl00v2rmf08uebkn4sr" type="BranchFlow">
+      <description><![CDATA[check_base_id_false]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals("false"));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_check_check_base_id]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0><![CDATA[false]]]]><![CDATA[></compareTo0>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_check_check_base_id]]></property>
+        </args>
+        <fromID><![CDATA[t000001g7kl00v2rmfi8ucl0n4sr]]></fromID>
+        <toID><![CDATA[l200001g7kl00v2rmfo8ucein4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[416]]></conditionLocationX>
+        <conditionLocationY><![CDATA[656]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="k600001g7kl00v2rmfk8uehcn4sr" type="BranchFlow">
+      <description><![CDATA[not_empty_2]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[2]]></branchIndex>
+        <implementation><![CDATA[return (!target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[notEquals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[di00001g7kl00v2rmfm8uco8n4sr]]></fromID>
+        <toID><![CDATA[l200001g7kl00v2rmfa8uc86n4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[592]]></conditionLocationX>
+        <conditionLocationY><![CDATA[400]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="v400001g7kl00v2rmf08ue8mn4sr" type="BranchFlow">
+      <description><![CDATA[status]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (!target0.stringValue().equals("I")) && (!target1.stringValue().equals("U")) && (!target2.stringValue().equals("D"));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[3]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_status_I]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[notEquals]]]]><![CDATA[></relation0>
+
+  <compareTo0><![CDATA[I]]]]><![CDATA[></compareTo0>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+  <method1><![CDATA[compareWithConstant]]]]><![CDATA[></method1>
+
+  <targetVariable1><![CDATA[str_status_I]]]]><![CDATA[></targetVariable1>
+
+  <xpath1/>
+
+  <relation1><![CDATA[notEquals]]]]><![CDATA[></relation1>
+
+  <compareTo1><![CDATA[U]]]]><![CDATA[></compareTo1>
+
+  <leftParenthesis1/>
+
+  <rightParenthesis1/>
+
+  <and1><![CDATA[true]]]]><![CDATA[></and1>
+
+  <method2><![CDATA[compareWithConstant]]]]><![CDATA[></method2>
+
+  <targetVariable2><![CDATA[str_status_I]]]]><![CDATA[></targetVariable2>
+
+  <xpath2/>
+
+  <relation2><![CDATA[notEquals]]]]><![CDATA[></relation2>
+
+  <compareTo2><![CDATA[D]]]]><![CDATA[></compareTo2>
+
+  <leftParenthesis2/>
+
+  <rightParenthesis2/>
+
+  <and2><![CDATA[true]]]]><![CDATA[></and2>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target2"><![CDATA[str_status_I]]></property>
+          <property key="target1"><![CDATA[str_status_I]]></property>
+          <property key="target0"><![CDATA[str_status_I]]></property>
+        </args>
+        <fromID><![CDATA[oa00001g7kl00v2rmf28ucnqn4sr]]></fromID>
+        <toID><![CDATA[d800001g7kl00v2rmf08ucs4n4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[413]]></conditionLocationX>
+        <conditionLocationY><![CDATA[16]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="i800001g7kl00v2rmf08udlkn4sr" type="BranchFlow">
+      <description><![CDATA[入力エラーがある場合]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (!target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[notEquals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[gm00001g7kl00v2rmf08ucrqn4sr]]></fromID>
+        <toID><![CDATA[es00001g7kl00v2rmfq8ucaen4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[384]]></conditionLocationX>
+        <conditionLocationY><![CDATA[1360]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="ua00001g7kl00v2rmf88uec8n4sr" type="BranchFlow">
+      <description><![CDATA[empty_4]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[2]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[d200001g7kl00v2rmfg8uc7kn4sr]]></fromID>
+        <toID><![CDATA[hk00001g7kl00v2rmfq8ucm8n4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[608]]></conditionLocationX>
+        <conditionLocationY><![CDATA[880]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="le00001g7kl00v2rmfm8ue0kn4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[fc00001g7kl00v2rmfg8ud1mn4sr]]></fromID>
+        <toID><![CDATA[gm00001g7kl00v2rmf08ucrqn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="js00001g7kl00v2rmfc8ue90n4sr" type="BranchFlow">
+      <description><![CDATA[empty_3]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[2]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[l200001g7kl00v2rmfo8ucein4sr]]></fromID>
+        <toID><![CDATA[a400001g7kl00v2rmfo8ucc2n4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[608]]></conditionLocationX>
+        <conditionLocationY><![CDATA[688]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="j400001g7kl00v2rmf88uedon4sr" type="BranchFlow">
+      <description><![CDATA[empty_2]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[di00001g7kl00v2rmfm8uco8n4sr]]></fromID>
+        <toID><![CDATA[de00001g7kl00v2rmf48ucggn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[592]]></conditionLocationX>
+        <conditionLocationY><![CDATA[480]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="di00001g7kl00v2rmfm8udocn4sr" type="BranchFlow">
+      <description><![CDATA[check_construction_base_false]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals("false"));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_check_construction_base_id]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0><![CDATA[false]]]]><![CDATA[></compareTo0>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_check_construction_base_id]]></property>
+        </args>
+        <fromID><![CDATA[li00001g7kl00v2rmfs8uctan4sr]]></fromID>
+        <toID><![CDATA[di00001g7kl00v2rmfm8uco8n4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[416]]></conditionLocationX>
+        <conditionLocationY><![CDATA[448]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="dg00001g7kl00v2rmf08ue1qn4sr" type="BranchFlow">
+      <description><![CDATA[empty_6]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[2]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[ic00001g7kl00v2rmfg8ucp2n4sr]]></fromID>
+        <toID><![CDATA[cm00001g7kl00v2rmf88ucjmn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[608]]></conditionLocationX>
+        <conditionLocationY><![CDATA[1232]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="qm00001g7kl00v2rmfg8udtmn4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[oa00001g7kl00v2rmf28ucnqn4sr]]></fromID>
+        <toID><![CDATA[bq00001g7kl00v2rmfe8ud3qn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="f800001g7kl00v2rmfs8udran4sr" type="BranchFlow">
+      <description><![CDATA[empty_5]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[2]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[is00001g7kl00v2rmfe8ucuan4sr]]></fromID>
+        <toID><![CDATA[do00001g7kl00v2rmf88ucimn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[608]]></conditionLocationX>
+        <conditionLocationY><![CDATA[1040]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="o400001g7kl00v2rmfe8ue4an4sr" type="BranchFlow">
+      <description><![CDATA[not_empty_6]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (!target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[notEquals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[ic00001g7kl00v2rmfg8ucp2n4sr]]></fromID>
+        <toID><![CDATA[so00001g7kl00v2rmfk8uc9cn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[608]]></conditionLocationX>
+        <conditionLocationY><![CDATA[1152]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="se00001g7kl00v2rmf68ueg0n4sr" type="BranchFlow">
+      <description><![CDATA[check_customer_hub_code_false]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals("false"));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_check_customer_hub_code]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0><![CDATA[false]]]]><![CDATA[></compareTo0>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_check_customer_hub_code]]></property>
+        </args>
+        <fromID><![CDATA[fc00001g7kl00v2rmfg8ud1mn4sr]]></fromID>
+        <toID><![CDATA[ic00001g7kl00v2rmfg8ucp2n4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[416]]></conditionLocationX>
+        <conditionLocationY><![CDATA[1200]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="si00001g7kl00v2rmfk8udpsn4sr" type="BranchFlow">
+      <description><![CDATA[check_failure_base_id_false]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals("false"));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_check_failure_base_id]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0><![CDATA[false]]]]><![CDATA[></compareTo0>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_check_failure_base_id]]></property>
+        </args>
+        <fromID><![CDATA[ca00001g7kl00v2rmfo8ucqgn4sr]]></fromID>
+        <toID><![CDATA[d200001g7kl00v2rmfg8uc7kn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[416]]></conditionLocationX>
+        <conditionLocationY><![CDATA[848]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="p400001g7kl00v2rmf28udqon4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[b000001g7kl00v2rmfa8ud4sn4sr]]></fromID>
+        <toID><![CDATA[b400001g7kl00v2rmf08ucbsn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="qq00001g7kl00v2rmfs8ueaon4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[q400001g7kl00v2rmfg8uchqn4sr]]></fromID>
+        <toID><![CDATA[fc00001g7kl00v2rmfg8ud1mn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="so00001g7kl00v2rmf48udn8n4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[t000001g7kl00v2rmfi8ucl0n4sr]]></fromID>
+        <toID><![CDATA[ca00001g7kl00v2rmfo8ucqgn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="v200001g7kl00v2rmf68udman4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[bq00001g7kl00v2rmfe8ud3qn4sr]]></fromID>
+        <toID><![CDATA[li00001g7kl00v2rmfs8uctan4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="me00001g7kl00v2rmfi8ueegn4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[li00001g7kl00v2rmfs8uctan4sr]]></fromID>
+        <toID><![CDATA[t000001g7kl00v2rmfi8ucl0n4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="m600001g7kl00v2rmfc8udv4n4sr" type="BranchFlow">
+      <description><![CDATA[not_empty_5]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (!target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[notEquals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[is00001g7kl00v2rmfe8ucuan4sr]]></fromID>
+        <toID><![CDATA[hi00001g7kl00v2rmf28ud0sn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[608]]></conditionLocationX>
+        <conditionLocationY><![CDATA[976]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="pe00001g7kl00v2rmf08uef4n4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[ca00001g7kl00v2rmfo8ucqgn4sr]]></fromID>
+        <toID><![CDATA[q400001g7kl00v2rmfg8uchqn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="r000001g7kl00v2rmfk8ue3cn4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[gm00001g7kl00v2rmf08ucrqn4sr]]></fromID>
+        <toID><![CDATA[qa00001g7kl00v2rmfs8ud2mn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="g000001g7kl00v2rmfm8ue6in4sr" type="BranchFlow">
+      <description><![CDATA[check_customer_code_false]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals("false"));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_check_customer_code]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0><![CDATA[false]]]]><![CDATA[></compareTo0>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_check_customer_code]]></property>
+        </args>
+        <fromID><![CDATA[q400001g7kl00v2rmfg8uchqn4sr]]></fromID>
+        <toID><![CDATA[is00001g7kl00v2rmfe8ucuan4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[416]]></conditionLocationX>
+        <conditionLocationY><![CDATA[1008]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="fq00001g7kl00v2rmfs8ue2gn4sr" type="BranchFlow">
+      <description><![CDATA[not_empty_3]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (!target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[notEquals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[l200001g7kl00v2rmfo8ucein4sr]]></fromID>
+        <toID><![CDATA[kq00001g7kl00v2rmfi8uckkn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[608]]></conditionLocationX>
+        <conditionLocationY><![CDATA[624]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="a000001g7kl00v2rmf88ue7kn4sr" type="BranchFlow">
+      <description><![CDATA[not_empty_4]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (!target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[notEquals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[d200001g7kl00v2rmfg8uc7kn4sr]]></fromID>
+        <toID><![CDATA[vo00001g7kl00v2rmfa8ucdqn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[608]]></conditionLocationX>
+        <conditionLocationY><![CDATA[800]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="ts00001g7kl00v2rmf48udk8n4sr" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[b400001g7kl00v2rmf08ucbsn4sr]]></fromID>
+        <toID><![CDATA[oa00001g7kl00v2rmf28ucnqn4sr]]></toID>
+      </base>
+    </memento>
+    <memento id="g600001g7kl00v2rmf28ue5sn4sr" type="BranchFlow">
+      <description><![CDATA[empty_1]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[cq00001g7kl00v2rmfs8ucf2n4sr]]></fromID>
+        <toID><![CDATA[qq00001g7kl00v2rmf68ucvmn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[592]]></conditionLocationX>
+        <conditionLocationY><![CDATA[192]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="fa00001g7kl00v2rmf68uds2n4sr" type="BranchFlow">
+      <description><![CDATA[not_empty_1]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[2]]></branchIndex>
+        <implementation><![CDATA[return (!target0.stringValue().equals(""));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_error_msg]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[notEquals]]]]><![CDATA[></relation0>
+
+  <compareTo0/>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_error_msg]]></property>
+        </args>
+        <fromID><![CDATA[cq00001g7kl00v2rmfs8ucf2n4sr]]></fromID>
+        <toID><![CDATA[je00001g7kl00v2rmfo8uc6cn4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[592]]></conditionLocationX>
+        <conditionLocationY><![CDATA[112]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+    <memento id="rk00001g7kl00v2rmfk8udukn4sr" type="BranchFlow">
+      <description><![CDATA[check_construction_base_false(1)]]></description>
+      <base type="attributes">
+        <branchIndex><![CDATA[1]]></branchIndex>
+        <implementation><![CDATA[return (target0.stringValue().equals("false"));
+
+]]></implementation>
+        <model><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<memento>
+
+  <subConditionCount><![CDATA[1]]]]><![CDATA[></subConditionCount>
+
+  <method0><![CDATA[compareWithConstant]]]]><![CDATA[></method0>
+
+  <targetVariable0><![CDATA[str_check_customer_hub_List]]]]><![CDATA[></targetVariable0>
+
+  <xpath0/>
+
+  <relation0><![CDATA[equals]]]]><![CDATA[></relation0>
+
+  <compareTo0><![CDATA[false]]]]><![CDATA[></compareTo0>
+
+  <leftParenthesis0/>
+
+  <rightParenthesis0/>
+
+  <and0><![CDATA[true]]]]><![CDATA[></and0>
+
+</memento>
+
+]]></model>
+        <args children="property" type="attributes">
+          <property key="target0"><![CDATA[str_check_customer_hub_List]]></property>
+        </args>
+        <fromID><![CDATA[bq00001g7kl00v2rmfe8ud3qn4sr]]></fromID>
+        <toID><![CDATA[cq00001g7kl00v2rmfs8ucf2n4sr]]></toID>
+      </base>
+      <extension type="attributes">
+        <conditionLocationX><![CDATA[416]]></conditionLocationX>
+        <conditionLocationY><![CDATA[160]]></conditionLocationY>
+        <comment/>
+        <visible><![CDATA[true]]></visible>
+      </extension>
+    </memento>
+  </children>
+</script>

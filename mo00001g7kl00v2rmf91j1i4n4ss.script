@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<script>
+  <memento>
+    <option type="attributes">
+      <DATA_PROCESSING_CONNECTION_OPTION_XMLFW_CONF><![CDATA[false]]></DATA_PROCESSING_CONNECTION_OPTION_XMLFW_CONF>
+    </option>
+    <extension type="attributes">
+      <created><![CDATA[1591076768865]]></created>
+      <lastUpdated><![CDATA[1591077109099]]></lastUpdated>
+      <testArgumentValues children="property" type="attributes"/>
+      <migrationFlows type="attributes"/>
+      <gridSize><![CDATA[16]]></gridSize>
+    </extension>
+  </memento>
+  <children type="components">
+    <memento id="i800001g7kl00v2rmff1j1jen4ss" type="ScriptOriginComponent">
+      <extension type="attributes">
+        <index><![CDATA[0]]></index>
+        <locationX><![CDATA[16]]></locationX>
+        <locationY><![CDATA[16]]></locationY>
+      </extension>
+      <base type="attributes"/>
+    </memento>
+    <memento id="s800001g7kl00v2rmf16lf5qn4ss" type="VariableProcessingComponent">
+      <name><![CDATA[ファイル名取得]]></name>
+      <description/>
+      <base type="attributes">
+        <model><![CDATA[#
+#Tue Jun 02 14:53:54 JST 2020
+GRID_SIZE=0
+TEST_DATA=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<testData>\r\n  <inputDocumentStart0/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <inputVariables/>\r\n  <inputComponentProperties/>\r\n  <outputVariables/>\r\n</testData>\r\n
+VARIABLES_MAPPER_INFORMATION=variables()
+FAST_CONVERTER_INFORMATION=variables(setVariable(String,str_ul_ch_file_name,substringBefore(convert(convert(getVariable(String,str_ul_file_name_I),,contains,part,,,\\\\,/),,contains,part,,,../../,/data/wagby/),.)),setVariable(String,str_date,iso8601ToCustom(now(),yyyyMMddHHmmssSSS)))
+MAPPING_DOCUMENT_2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><mapping type\="variable" version\="2.3"><layers><layer name\="\u57FA\u672C"><logic class\="com.appresso.ds.mapper.model.CoreFunctionIcon$SubstringBeforeIcon" comment\="." id\="lo00005g0ml00uip2obji1can2ak" type\="String" x\="353" y\="240"><field name\="substring" value\="."/><links><logic class\="com.appresso.ds.mapper.model.ConvertIcon" comment\="file\u30D1\u30B9\u5909\u63DB" id\="tg00005g0ml00uip2ol9f140n2ak" type\="String" x\="118" y\="242"><field name\="checkType" value\="1"/><field name\="replaceType" value\="1"/><field name\="prefix" value\=""/><field name\="suffix" value\=""/><field name\="keys" value\="../../"/><field name\="values" value\="/data/wagby/"/><field name\="table" value\="../../,/data/wagby/"/><links><logic class\="com.appresso.ds.mapper.model.ConvertIcon" comment\="" id\="m600005g0nl00vep68i4ft76n2bo" type\="String" x\="155" y\="341"><field name\="checkType" value\="1"/><field name\="replaceType" value\="1"/><field name\="prefix" value\=""/><field name\="suffix" value\=""/><field name\="keys" value\="\\\\"/><field name\="values" value\="/"/><field name\="table" value\="\\\\,/"/></logic></links></logic></links></logic><logic class\="com.appresso.ds.mapper.model.ExtendedFunctionIcon$Iso8601ToCustomIcon" comment\="" id\="aq0000ng3rl00s4rl4a6t05sn2je" type\="String" x\="610" y\="422"><field name\="format" value\="yyyyMMddHHmmssSSS"/><links><logic class\="com.appresso.ds.mapper.model.ExtendedFunctionIcon$NowIcon" comment\="\u30B3\u30D4\u30FC\u30D5\u30A1\u30A4\u30EB\u540D\u7528\u306E\u73FE\u5728\u65E5\u6642\u3092\u8A2D\u5B9A" id\="u20000ng3rl00s4rl4e42k24n2je" type\="String" x\="461" y\="454"/></links></logic></layer></layers></mapping>
+TYPE=variableMapper
+]]></model>
+      </base>
+      <extension type="attributes">
+        <locationX><![CDATA[128]]></locationX>
+        <locationY><![CDATA[16]]></locationY>
+        <index><![CDATA[2]]></index>
+        <breakPoint><![CDATA[true]]></breakPoint>
+        <visible><![CDATA[true]]></visible>
+        <inPSPBlock><![CDATA[false]]></inPSPBlock>
+        <inputPSPSupported><![CDATA[false]]></inputPSPSupported>
+        <outputPSPSupported><![CDATA[false]]></outputPSPSupported>
+        <inputGlobalSchemaName/>
+        <outputGlobalSchemaName/>
+      </extension>
+    </memento>
+    <memento id="ea00001g7kl00v2rmf91j32on4ss" type="ReturnComponent">
+      <extension type="attributes">
+        <index><![CDATA[1]]></index>
+        <locationX><![CDATA[512]]></locationX>
+        <locationY><![CDATA[16]]></locationY>
+      </extension>
+      <base type="attributes"/>
+    </memento>
+  </children>
+  <children type="variables">
+    <memento id="qe00001g7kl00v2rmf97o5mqn4ss" type="Variable">
+      <name><![CDATA[str_ul_file_name_I]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[true]]></inputParam>
+        <outputParam><![CDATA[false]]></outputParam>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[4]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="cs00001g7kl00v2rmfhb3e9gn4ss" type="Variable">
+      <name><![CDATA[str_date]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[5]]></index>
+      </extension>
+      <description/>
+    </memento>
+    <memento id="i800001g7kl00v2rmfjbvbbin4ss" type="Variable">
+      <name><![CDATA[str_copy_file_name_O]]></name>
+      <base type="attributes">
+        <initialValue/>
+        <inputParam><![CDATA[false]]></inputParam>
+        <outputParam><![CDATA[true]]></outputParam>
+        <valueType><![CDATA[string]]></valueType>
+      </base>
+      <extension type="attributes">
+        <index><![CDATA[6]]></index>
+      </extension>
+      <description/>
+    </memento>
+  </children>
+  <children type="relations">
+    <memento id="ac00001g7kl00v2rmfl6qkcqn4ss" type="ProcessFlow">
+      <base type="attributes">
+        <fromID><![CDATA[i800001g7kl00v2rmff1j1jen4ss]]></fromID>
+        <toID><![CDATA[s800001g7kl00v2rmf16lf5qn4ss]]></toID>
+      </base>
+    </memento>
+  </children>
+</script>
